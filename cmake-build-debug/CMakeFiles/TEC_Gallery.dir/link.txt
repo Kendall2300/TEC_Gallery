@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/TEC_Gallery.dir/main.cpp.o -o TEC_Gallery  -Wl,-rpath,/usr/local/lib /usr/local/lib/libmongocxx.so /usr/local/lib/libbsoncxx.so /usr/local/lib/libbsoncxx.so 
