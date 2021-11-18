@@ -1,3 +1,4 @@
-/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/TEC_Gallery.dir
+/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/TEC_Gallery.dir
+/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/TEC_Gallery_autogen.dir

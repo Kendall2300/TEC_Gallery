@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
+RM = /home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kendall/Escritorio/Proyectos/TEC_Gallery
+CMAKE_SOURCE_DIR = /home/gabriel/Documentos/GitHub/TEC_Gallery
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug
+CMAKE_BINARY_DIR = /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TEC_Gallery.dir/depend.make
@@ -66,33 +66,53 @@ include CMakeFiles/TEC_Gallery.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TEC_Gallery.dir/flags.make
 
+CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o: CMakeFiles/TEC_Gallery.dir/flags.make
+CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o: TEC_Gallery_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o -c /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery_autogen/mocs_compilation.cpp
+
+CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery_autogen/mocs_compilation.cpp > CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery_autogen/mocs_compilation.cpp -o CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/TEC_Gallery.dir/main.cpp.o: CMakeFiles/TEC_Gallery.dir/flags.make
 CMakeFiles/TEC_Gallery.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TEC_Gallery.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TEC_Gallery.dir/main.cpp.o -c /home/kendall/Escritorio/Proyectos/TEC_Gallery/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TEC_Gallery.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TEC_Gallery.dir/main.cpp.o -c /home/gabriel/Documentos/GitHub/TEC_Gallery/main.cpp
 
 CMakeFiles/TEC_Gallery.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TEC_Gallery.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kendall/Escritorio/Proyectos/TEC_Gallery/main.cpp > CMakeFiles/TEC_Gallery.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gabriel/Documentos/GitHub/TEC_Gallery/main.cpp > CMakeFiles/TEC_Gallery.dir/main.cpp.i
 
 CMakeFiles/TEC_Gallery.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TEC_Gallery.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kendall/Escritorio/Proyectos/TEC_Gallery/main.cpp -o CMakeFiles/TEC_Gallery.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gabriel/Documentos/GitHub/TEC_Gallery/main.cpp -o CMakeFiles/TEC_Gallery.dir/main.cpp.s
 
 # Object files for target TEC_Gallery
 TEC_Gallery_OBJECTS = \
+"CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/TEC_Gallery.dir/main.cpp.o"
 
 # External object files for target TEC_Gallery
 TEC_Gallery_EXTERNAL_OBJECTS =
 
+TEC_Gallery: CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o
 TEC_Gallery: CMakeFiles/TEC_Gallery.dir/main.cpp.o
 TEC_Gallery: CMakeFiles/TEC_Gallery.dir/build.make
 TEC_Gallery: /usr/local/lib/libmongocxx.so
 TEC_Gallery: /usr/local/lib/libbsoncxx.so
 TEC_Gallery: /usr/local/lib/libbsoncxx.so
+TEC_Gallery: /home/gabriel/Qt/6.2.0/gcc_64/lib/libQt6Widgets.so.6.2.0
+TEC_Gallery: /home/gabriel/Qt/6.2.0/gcc_64/lib/libQt6Gui.so.6.2.0
+TEC_Gallery: /home/gabriel/Qt/6.2.0/gcc_64/lib/libQt6Core.so.6.2.0
+TEC_Gallery: /usr/lib/x86_64-linux-gnu/libGLX.so
+TEC_Gallery: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 TEC_Gallery: CMakeFiles/TEC_Gallery.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TEC_Gallery"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TEC_Gallery"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TEC_Gallery.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -104,6 +124,6 @@ CMakeFiles/TEC_Gallery.dir/clean:
 .PHONY : CMakeFiles/TEC_Gallery.dir/clean
 
 CMakeFiles/TEC_Gallery.dir/depend:
-	cd /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kendall/Escritorio/Proyectos/TEC_Gallery /home/kendall/Escritorio/Proyectos/TEC_Gallery /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/TEC_Gallery.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabriel/Documentos/GitHub/TEC_Gallery /home/gabriel/Documentos/GitHub/TEC_Gallery /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/TEC_Gallery.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TEC_Gallery.dir/depend
 

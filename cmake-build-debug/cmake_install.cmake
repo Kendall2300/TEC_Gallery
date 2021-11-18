@@ -1,4 +1,4 @@
-# Install script for directory: /home/kendall/Escritorio/Proyectos/TEC_Gallery
+# Install script for directory: /home/gabriel/Documentos/GitHub/TEC_Gallery
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
