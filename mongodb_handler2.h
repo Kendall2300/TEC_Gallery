@@ -1,5 +1,3 @@
-#pragma once
-
 #include <cstdint>
 #include <string>
 #include <iostream>
@@ -10,10 +8,10 @@
 #include "mongocxx/database.hpp"
 #include "mongocxx/uri.hpp"
 
-namespace Users {
+namespace Metadata {
     constexpr char kMongoDbUri[] = "mongodb://0.0.0.0:27017";
     constexpr char kDatabaseName[] = "TECGallery";
-    constexpr char kCollectionName[] = "Users";
+    constexpr char kCollectionName[] = "Metadata_info";
 
     class MongoDbHandler {
     public:
@@ -21,8 +19,8 @@ namespace Users {
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
-        bool AddUserToDb(const std::string &user_name,
-                              const std::string &user_pass) {
+        bool AddMetadataToDb(const std::string &user_name,
+                         const std::string &user_pass) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};
 
@@ -39,7 +37,7 @@ namespace Users {
             return false;
         }
 
-        bool RemoveUserFromDb(const std::string &user_name) {
+        bool RemoveMetadataFromDb(const std::string &user_name) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};
 

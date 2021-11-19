@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/kendall/Escritorio/Proyectos/TEC_Gallery/character_size.h
-ostream
--
-string
--
-unordered_map
--
-
 /home/kendall/Escritorio/Proyectos/TEC_Gallery/main.cpp
 iostream
 -
@@ -35,8 +27,6 @@ bsoncxx/json.hpp
 /home/kendall/Escritorio/Proyectos/TEC_Gallery/bsoncxx/json.hpp
 bsoncxx/oid.hpp
 /home/kendall/Escritorio/Proyectos/TEC_Gallery/bsoncxx/oid.hpp
-character_size.h
-/home/kendall/Escritorio/Proyectos/TEC_Gallery/character_size.h
 mongocxx/client.hpp
 /home/kendall/Escritorio/Proyectos/TEC_Gallery/mongocxx/client.hpp
 mongocxx/database.hpp
