@@ -15,9 +15,9 @@ namespace Users {
     constexpr char kDatabaseName[] = "TECGallery";
     constexpr char kCollectionName[] = "Users";
 
-    class MongoDbHandler {
+    class MongoDbUserHandler {
     public:
-        MongoDbHandler()
+        MongoDbUserHandler()
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
@@ -52,6 +52,9 @@ namespace Users {
                 return maybe_result->deleted_count() == 1;
             }
             return false;
+        }
+        bool getUserPass(){
+
         }
 
     private:

@@ -13,20 +13,27 @@ namespace Metadata {
     constexpr char kDatabaseName[] = "TECGallery";
     constexpr char kCollectionName[] = "Metadata_info";
 
-    class MongoDbHandler {
+    class MongoDbMetaHandler {
     public:
-        MongoDbHandler()
+        MongoDbMetaHandler()
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
-        bool AddMetadataToDb(const std::string &user_name,
-                         const std::string &user_pass) {
+        bool AddMetadataToDb(const std::string &img_name,
+                         const std::string &img_autor,
+                         const std::string &creation_year,
+                         const std::string &height,
+                         const std::string &description) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};
 
             bsoncxx::v_noabi::document::value doc_value =
-                    builder << "User_name" << user_name
-                            << "Password" << user_pass <<bsoncxx::builder::stream::finalize;
+                    builder << "Img_name" << img_name
+                            << "Autor" << img_autor
+                            << "Creation_year" << creation_year
+                            << "Height" << height
+                            << "Description" << description
+                            << bsoncxx::builder::stream::finalize;
 
             bsoncxx::stdx::optional<mongocxx::result::insert_one> maybe_result =
                     collection.insert_one(doc_value.view());
@@ -37,12 +44,12 @@ namespace Metadata {
             return false;
         }
 
-        bool RemoveMetadataFromDb(const std::string &user_name) {
+        bool RemoveMetadataFromDb(const std::string &img_name) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};
 
             bsoncxx::document::value doc =
-                    builder << "User_name" << user_name << bsoncxx::builder::stream::finalize;
+                    builder << "Img_name" << img_name << bsoncxx::builder::stream::finalize;
             bsoncxx::stdx::optional<mongocxx::result::delete_result> maybe_result =
                     collection.delete_one(doc.view());
 
