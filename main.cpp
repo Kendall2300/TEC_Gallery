@@ -1,20 +1,15 @@
-#pragma once
-
-#include <cstdint>
-#include <string>
 #include <iostream>
+#include "mongocxx/instance.hpp"
+#include "mongodb_handler.h"
 
-
-#include "bsoncxx/builder/stream/document.hpp"
-#include "bsoncxx/json.hpp"
-#include "bsoncxx/oid.hpp"
-#include "mongocxx/client.hpp"
-#include "mongocxx/database.hpp"
-#include "mongocxx/uri.hpp"
-
-#include <QApplication>
+void print_result(const bool &result, const char* operation) {
+    std::cout << "the " << operation << (result ? " worked" : " didn't work.") << std::endl;
+}
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    mongocxx::instance instance;
+    learning::MongoDbHandler mhandler;
+    mhandler.AddCharacterToDb("Daniel",learning::CharacterSize::kMedium,2);
+    std::cout<<"Added"<<std::endl;
     return 0;
 }

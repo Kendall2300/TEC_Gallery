@@ -5,61 +5,50 @@
 		<Option title="TEC_Gallery"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\libmongocxx-3.6.6\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\libbsoncxx-3.6.6\;CMake Files\..\..\..\Qt\;CMake Files\..\..\..\Qt\6.2.0\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\3rdparty\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\3rdparty\kwin\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\;CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\libmongocxx-3.6.6\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\libbsoncxx-3.6.6\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
+				<Option working_dir="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
+				<Option working_dir="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
+				<Option working_dir="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TEC_Gallery">
-				<Option output="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
+				<Option output="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/TEC_Gallery" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DQT_WIDGETS_LIB"/>
-					<Add option="-DQT_CORE_LIB"/>
-					<Add option="-DQT_GUI_LIB"/>
-					<Add directory="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
-					<Add directory="/home/gabriel/Documentos/GitHub/TEC_Gallery"/>
-					<Add directory="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery_autogen/include"/>
 					<Add directory="/usr/local/include/mongocxx/v_noabi"/>
 					<Add directory="/usr/local/include/bsoncxx/v_noabi"/>
 					<Add directory="/usr/local/include/libmongoc-1.0"/>
 					<Add directory="/usr/local/include/libbson-1.0"/>
 					<Add directory="/usr/local/lib"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include/QtWidgets"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include/QtCore"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/mkspecs/linux-g++"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include/QtGui"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -69,35 +58,24 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 TEC_Gallery"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 TEC_Gallery"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TEC_Gallery/fast">
-				<Option output="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
+				<Option output="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/TEC_Gallery" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add option="-DQT_WIDGETS_LIB"/>
-					<Add option="-DQT_CORE_LIB"/>
-					<Add option="-DQT_GUI_LIB"/>
-					<Add directory="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
-					<Add directory="/home/gabriel/Documentos/GitHub/TEC_Gallery"/>
-					<Add directory="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery_autogen/include"/>
 					<Add directory="/usr/local/include/mongocxx/v_noabi"/>
 					<Add directory="/usr/local/include/bsoncxx/v_noabi"/>
 					<Add directory="/usr/local/include/libmongoc-1.0"/>
 					<Add directory="/usr/local/include/libbson-1.0"/>
 					<Add directory="/usr/local/lib"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include/QtWidgets"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include/QtCore"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/mkspecs/linux-g++"/>
-					<Add directory="/home/gabriel/Qt/6.2.0/gcc_64/include/QtGui"/>
 					<Add directory="/usr/include/c++/9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
 					<Add directory="/usr/include/c++/9/backward"/>
@@ -107,235 +85,30 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 TEC_Gallery/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="TEC_Gallery_autogen">
-				<Option working_dir="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 TEC_Gallery_autogen"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 TEC_Gallery/fast"/>
+					<CompileFile command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j3 -f &quot;/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/TEC_Gallery_autogen/mocs_compilation.cpp">
+		<Unit filename="/home/kendall/Escritorio/Proyectos/TEC_Gallery/main.cpp">
 			<Option target="TEC_Gallery"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/main.cpp">
-			<Option target="TEC_Gallery"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/CMakeLists.txt">
+		<Unit filename="/home/kendall/Escritorio/Proyectos/TEC_Gallery/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../../../usr/local/lib/cmake/libmongocxx-3.6.6/libmongocxx-config-version.cmake">
+		<Unit filename="/home/kendall/Escritorio/Proyectos/TEC_Gallery/../../../../../usr/local/lib/cmake/libmongocxx-3.6.6/libmongocxx-config-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libmongocxx-3.6.6\"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../../../usr/local/lib/cmake/libmongocxx-3.6.6/libmongocxx-config.cmake">
+		<Unit filename="/home/kendall/Escritorio/Proyectos/TEC_Gallery/../../../../../usr/local/lib/cmake/libmongocxx-3.6.6/libmongocxx-config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libmongocxx-3.6.6\"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../../../usr/local/lib/cmake/libbsoncxx-3.6.6/libbsoncxx-config-version.cmake">
+		<Unit filename="/home/kendall/Escritorio/Proyectos/TEC_Gallery/../../../../../usr/local/lib/cmake/libbsoncxx-3.6.6/libbsoncxx-config-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libbsoncxx-3.6.6\"/>
 		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../../../usr/local/lib/cmake/libbsoncxx-3.6.6/libbsoncxx-config.cmake">
+		<Unit filename="/home/kendall/Escritorio/Proyectos/TEC_Gallery/../../../../../usr/local/lib/cmake/libbsoncxx-3.6.6/libbsoncxx-config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\libbsoncxx-3.6.6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Widgets\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/FindWrapAtomic.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/Qt6Config.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/Qt6ConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/Qt6Dependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/Qt6Targets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/Qt6VersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtFeature.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtFeatureCommon.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicFinalizerHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicFindPackageHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicPluginHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicTargetHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/QtPublicWalkLibsHelpers.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6\3rdparty\kwin\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6WidgetsTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6CoreTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6GuiTools\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Core\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiTargets-relwithdebinfo.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
-		</Unit>
-		<Unit filename="/home/gabriel/Documentos/GitHub/TEC_Gallery/../../../Qt/6.2.0/gcc_64/lib/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\Qt\6.2.0\gcc_64\lib\cmake\Qt6Gui\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

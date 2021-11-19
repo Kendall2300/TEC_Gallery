@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/169/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake -E rm -f
+RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gabriel/Documentos/GitHub/TEC_Gallery
+CMAKE_SOURCE_DIR = /home/kendall/Escritorio/Proyectos/TEC_Gallery
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/169/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -78,7 +78,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/169/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,43 +129,6 @@ TEC_Gallery/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEC_Gallery.dir/build.make CMakeFiles/TEC_Gallery.dir/build
 .PHONY : TEC_Gallery/fast
 
-#=============================================================================
-# Target rules for targets named TEC_Gallery_autogen
-
-# Build rule for target.
-TEC_Gallery_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TEC_Gallery_autogen
-.PHONY : TEC_Gallery_autogen
-
-# fast build rule for target.
-TEC_Gallery_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEC_Gallery_autogen.dir/build.make CMakeFiles/TEC_Gallery_autogen.dir/build
-.PHONY : TEC_Gallery_autogen/fast
-
-TEC_Gallery_autogen/mocs_compilation.o: TEC_Gallery_autogen/mocs_compilation.cpp.o
-.PHONY : TEC_Gallery_autogen/mocs_compilation.o
-
-# target to build an object file
-TEC_Gallery_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEC_Gallery.dir/build.make CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.o
-.PHONY : TEC_Gallery_autogen/mocs_compilation.cpp.o
-
-TEC_Gallery_autogen/mocs_compilation.i: TEC_Gallery_autogen/mocs_compilation.cpp.i
-.PHONY : TEC_Gallery_autogen/mocs_compilation.i
-
-# target to preprocess a source file
-TEC_Gallery_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEC_Gallery.dir/build.make CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.i
-.PHONY : TEC_Gallery_autogen/mocs_compilation.cpp.i
-
-TEC_Gallery_autogen/mocs_compilation.s: TEC_Gallery_autogen/mocs_compilation.cpp.s
-.PHONY : TEC_Gallery_autogen/mocs_compilation.s
-
-# target to generate assembly for a file
-TEC_Gallery_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEC_Gallery.dir/build.make CMakeFiles/TEC_Gallery.dir/TEC_Gallery_autogen/mocs_compilation.cpp.s
-.PHONY : TEC_Gallery_autogen/mocs_compilation.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -198,11 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... TEC_Gallery_autogen"
 	@echo "... TEC_Gallery"
-	@echo "... TEC_Gallery_autogen/mocs_compilation.o"
-	@echo "... TEC_Gallery_autogen/mocs_compilation.i"
-	@echo "... TEC_Gallery_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
