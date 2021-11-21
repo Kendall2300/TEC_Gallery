@@ -5,7 +5,7 @@
 #include <QMessageBox>
 #include "secondwin.h"
 #include "signup.h"
-
+#include "mongodb_handler.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -31,10 +31,14 @@ void MainWindow::on_label_3_linkActivated(const QString &link)
 
 void MainWindow::on_SignIn_clicked()
 {
+    mongocxx::instance instance;
+    Users::MongoDbUserHandler mhandler;
     QString username = ui->line_User->text();
     QString password = ui->line_Pass->text();
 
-    if (username=="Gabriel" && password=="1234"){
+    bool verificate = mhandler.getUserPass(username.toStdString(), password.toStdString());
+
+    if (true==verificate){
         QMessageBox::information(this, "Login", "Username and password are correct");
         hide();
         SecondWin secondWin;

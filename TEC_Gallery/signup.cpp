@@ -26,6 +26,8 @@ void SignUp::on_pushButton_clicked()
 
 
     mhandler.AddUserToDb(usernamenew.toStdString(), passwordnew.toStdString());
+
+    this->close();
 }
 
 
