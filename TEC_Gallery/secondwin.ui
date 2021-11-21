@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>SecondWin</class>
  <widget class="QDialog" name="SecondWin">
@@ -5,13 +6,65 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>882</width>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QLabel" name="labelimage">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>811</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="InsertBu">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>400</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Insert</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>400</y>
+     <width>89</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Metadata</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="ChangeBu">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>400</y>
+     <width>121</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Change Image</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

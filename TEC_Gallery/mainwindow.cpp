@@ -4,6 +4,7 @@
 #include <QColor>
 #include <QMessageBox>
 #include "secondwin.h"
+#include "signup.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -44,5 +45,12 @@ void MainWindow::on_SignIn_clicked()
         QMessageBox::warning(this, "Login", "Username and password are not correct");
 
     }
+}
+
+
+void MainWindow::on_SignUp_clicked()
+{
+    signup = new SignUp(this);
+    signup->show();
 }
 
