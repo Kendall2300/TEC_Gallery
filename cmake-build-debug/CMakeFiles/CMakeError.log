@@ -1,22 +1,22 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_4b6c3/fast && /usr/bin/make  -f CMakeFiles/cmTC_4b6c3.dir/build.make CMakeFiles/cmTC_4b6c3.dir/build
-make[1]: se entra en el directorio '/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4b6c3.dir/src.c.o
-/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4b6c3.dir/src.c.o -c /home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4b6c3
-/home/gabriel/clion-2021.2.2/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4b6c3.dir/link.txt --verbose=1
-/usr/bin/cc CMakeFiles/cmTC_4b6c3.dir/src.c.o -o cmTC_4b6c3 
-/usr/bin/ld: CMakeFiles/cmTC_4b6c3.dir/src.c.o: en la función `main':
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_00bbd/fast && /usr/bin/make  -f CMakeFiles/cmTC_00bbd.dir/build.make CMakeFiles/cmTC_00bbd.dir/build
+make[1]: se entra en el directorio '/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00bbd.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_00bbd.dir/src.c.o -c /home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_00bbd
+/snap/clion/169/bin/cmake/linux/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00bbd.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_00bbd.dir/src.c.o -o cmTC_00bbd 
+/usr/bin/ld: CMakeFiles/cmTC_00bbd.dir/src.c.o: en la función `main':
 src.c:(.text+0x46): referencia a `pthread_create' sin definir
 /usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
 /usr/bin/ld: src.c:(.text+0x5e): referencia a `pthread_cancel' sin definir
 /usr/bin/ld: src.c:(.text+0x6f): referencia a `pthread_join' sin definir
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_4b6c3.dir/build.make:99: cmTC_4b6c3] Error 1
-make[1]: se sale del directorio '/home/gabriel/Documentos/GitHub/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp'
-make: *** [Makefile:127: cmTC_4b6c3/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_00bbd.dir/build.make:99: cmTC_00bbd] Error 1
+make[1]: se sale del directorio '/home/kendall/Escritorio/Proyectos/TEC_Gallery/cmake-build-debug/CMakeFiles/CMakeTmp'
+make: *** [Makefile:127: cmTC_00bbd/fast] Error 2
 
 
 Source file was:

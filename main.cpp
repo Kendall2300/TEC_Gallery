@@ -1,20 +1,19 @@
-#pragma once
-
-#include <cstdint>
-#include <string>
 #include <iostream>
+#include "mongocxx/instance.hpp"
+#include "mongodb_handler.h"
+#include "mongodb_handler2.h"
 
-
-#include "bsoncxx/builder/stream/document.hpp"
-#include "bsoncxx/json.hpp"
-#include "bsoncxx/oid.hpp"
-#include "mongocxx/client.hpp"
-#include "mongocxx/database.hpp"
-#include "mongocxx/uri.hpp"
-
-#include <QApplication>
+void print_result(const bool &result, const char* operation) {
+    std::cout << "the " << operation << (result ? " worked" : " didn't work.") << std::endl;
+}
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    mongocxx::instance instance;
+    Users::MongoDbUserHandler mhandler;
+    //mhandler.AddUserToDb("Daniel","pruebasdepassword");
+    //mhandler.AddUserToDb("Haruto","harutoisspring");
+    //mhandler.RemoveUserFromDb("Haruto");
+    //std::cout<<"Added"<<std::endl;
+
     return 0;
 }
