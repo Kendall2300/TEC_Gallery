@@ -10,10 +10,12 @@ void print_result(const bool &result, const char* operation) {
 int main() {
     mongocxx::instance instance;
     Users::MongoDbUserHandler mhandler;
-    //mhandler.AddUserToDb("Daniel","pruebasdepassword");
     //mhandler.AddUserToDb("Haruto","harutoisspring");
+    //mhandler.getUserPass("Haruto","harutoisspring");
     //mhandler.RemoveUserFromDb("Haruto");
+    //mhandler.updatePassword("Daniel","testing");
     //std::cout<<"Added"<<std::endl;
+
 
     return 0;
 }

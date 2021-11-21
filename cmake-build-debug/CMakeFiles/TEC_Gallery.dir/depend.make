@@ -4,6 +4,7 @@
 CMakeFiles/TEC_Gallery.dir/main.cpp.o: \
  ../main.cpp \
  ../mongodb_handler.h \
+ ../mongodb_handler2.h \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/element.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/value.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/array/view.hpp \
@@ -17,6 +18,7 @@ CMakeFiles/TEC_Gallery.dir/main.cpp.o: \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/basic/sub_document.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/concatenate.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/core.hpp \
+ /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/stream/array.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/stream/array_context.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/stream/closed_context.hpp \
  /usr/local/include/bsoncxx/v_noabi/bsoncxx/builder/stream/document.hpp \
