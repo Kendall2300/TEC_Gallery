@@ -53,7 +53,7 @@
      <string>PushButton</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="newuser">
     <property name="geometry">
      <rect>
       <x>170</x>
@@ -63,7 +63,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="newpass">
     <property name="geometry">
      <rect>
       <x>170</x>
