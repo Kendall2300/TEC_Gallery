@@ -4,8 +4,8 @@
 
 #include "HuffEncoder.h"
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 
 void HuffEncoder::encode(Node* root, string str, unordered_map<char, string> &huffmanCode)
 {
@@ -21,8 +21,10 @@ void HuffEncoder::encode(Node* root, string str, unordered_map<char, string> &hu
     encode(root->right, str + "1", huffmanCode);
 }
 
+//------------------------------------------------------------------------------------------------------------------------
 void HuffEncoder::decode(Node* root, int &index, string str)
 {
+//    cout << "bruh\n";
     if (root == nullptr) {
         return;
     }
@@ -42,6 +44,7 @@ void HuffEncoder::decode(Node* root, int &index, string str)
         decode(root->right, index, str);
 }
 
+//---------------------------------------------------------------------------------------------------------------
 string HuffEncoder::buildHuffmanTree(string text)
 {
     // count frequency of appearance of each character
@@ -66,8 +69,10 @@ string HuffEncoder::buildHuffmanTree(string text)
     {
         // Remove the two nodes of highest priority
         // (lowest frequency) from the queue
-        Node *left = pq.top(); pq.pop();
-        Node *right = pq.top();	pq.pop();
+        Node *left = pq.top();
+        pq.pop();
+        Node *right = pq.top();
+        pq.pop();
 
         // Create a new internal node with these two nodes
         // as children and with frequency equal to the sum
@@ -77,13 +82,20 @@ string HuffEncoder::buildHuffmanTree(string text)
         pq.push(getNode('\0', sum, left, right));
     }
 
+
     // root stores pointer to root of Huffman Tree
-    Node* root = pq.top();
+//    map<int, priority_queue<Node*, vector<Node*>, comp>> m;
+//    m.insert(make_pair(1, pq));
+//    priority_queue<Node*, vector<Node*>, comp> ffs = m[1];
+
+
+    root = pq.top();
 
     // traverse the Huffman Tree and store Huffman Codes
     // in a map. Also prints them
     unordered_map<char, string> huffmanCode;
     encode(root, "", huffmanCode);
+
 
     cout << "Huffman Codes are :\n" << '\n';
     for (auto pair: huffmanCode) {
@@ -98,17 +110,19 @@ string HuffEncoder::buildHuffmanTree(string text)
         binCode += huffmanCode[ch];
     }
 
-    cout << "\nEncoded string is :\n" << binCode << '\n';
-    return binCode;
+//    cout << "\nEncoded string is :\n" << binCode << '\n';
 
+//----------------------------------------------------------------------------------------------------------------------
     // traverse the Huffman Tree again and this time
     // decode the encoded string
 //    int index = -1;
 //    cout << "\nDecoded string is: \n";
-//    while (index < (int)str.size() - 2) {
-//        decode(root, index, str);
+//    while (index < (int)binCode.size() - 2) {
+//        decode(getRoot(), index, binCode);
 //    }
+    return binCode;
 }
+
 
 
 

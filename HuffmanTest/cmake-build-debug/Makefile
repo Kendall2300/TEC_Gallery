@@ -129,6 +129,30 @@ HuffmanTest/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/build
 .PHONY : HuffmanTest/fast
 
+HuffDecoder.o: HuffDecoder.cpp.o
+.PHONY : HuffDecoder.o
+
+# target to build an object file
+HuffDecoder.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o
+.PHONY : HuffDecoder.cpp.o
+
+HuffDecoder.i: HuffDecoder.cpp.i
+.PHONY : HuffDecoder.i
+
+# target to preprocess a source file
+HuffDecoder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i
+.PHONY : HuffDecoder.cpp.i
+
+HuffDecoder.s: HuffDecoder.cpp.s
+.PHONY : HuffDecoder.s
+
+# target to generate assembly for a file
+HuffDecoder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s
+.PHONY : HuffDecoder.cpp.s
+
 HuffEncoder.o: HuffEncoder.cpp.o
 .PHONY : HuffEncoder.o
 
@@ -152,6 +176,30 @@ HuffEncoder.s: HuffEncoder.cpp.s
 HuffEncoder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.s
 .PHONY : HuffEncoder.cpp.s
+
+Huffman.o: Huffman.cpp.o
+.PHONY : Huffman.o
+
+# target to build an object file
+Huffman.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/Huffman.cpp.o
+.PHONY : Huffman.cpp.o
+
+Huffman.i: Huffman.cpp.i
+.PHONY : Huffman.i
+
+# target to preprocess a source file
+Huffman.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/Huffman.cpp.i
+.PHONY : Huffman.cpp.i
+
+Huffman.s: Huffman.cpp.s
+.PHONY : Huffman.s
+
+# target to generate assembly for a file
+Huffman.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/Huffman.cpp.s
+.PHONY : Huffman.cpp.s
 
 img2stringTraductor.o: img2stringTraductor.cpp.o
 .PHONY : img2stringTraductor.o
@@ -210,9 +258,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... HuffmanTest"
+	@echo "... HuffDecoder.o"
+	@echo "... HuffDecoder.i"
+	@echo "... HuffDecoder.s"
 	@echo "... HuffEncoder.o"
 	@echo "... HuffEncoder.i"
 	@echo "... HuffEncoder.s"
+	@echo "... Huffman.o"
+	@echo "... Huffman.i"
+	@echo "... Huffman.s"
 	@echo "... img2stringTraductor.o"
 	@echo "... img2stringTraductor.i"
 	@echo "... img2stringTraductor.s"

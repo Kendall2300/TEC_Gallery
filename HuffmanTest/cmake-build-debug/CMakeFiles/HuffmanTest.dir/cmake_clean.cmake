@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o"
   "CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
+  "CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
   "CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
   "CMakeFiles/HuffmanTest.dir/main.cpp.o"
   "HuffmanTest"

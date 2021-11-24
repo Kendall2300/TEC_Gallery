@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffDecoder.cpp">
+			<Option target="HuffmanTest"/>
+		</Unit>
+		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffDecoder.h">
+			<Option target="HuffmanTest"/>
+		</Unit>
 		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.cpp">
 			<Option target="HuffmanTest"/>
 		</Unit>
 		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.h">
+			<Option target="HuffmanTest"/>
+		</Unit>
+		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/Huffman.cpp">
+			<Option target="HuffmanTest"/>
+		</Unit>
+		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/Huffman.h">
 			<Option target="HuffmanTest"/>
 		</Unit>
 		<Unit filename="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.cpp">

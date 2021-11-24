@@ -13,7 +13,7 @@
 using namespace std;
 using namespace cv;
 
-inline uchar reduceVal(const uchar val)
+inline uchar reduceBGR(const uchar val)
 {
     if (val < 64) return 0;
     if (val < 128) return 64;
@@ -28,9 +28,9 @@ void processColors(Mat& img)
         for (int j = 0; j < img.cols; j++)
         {
             const int pi = i*img.cols*3 + j*3;
-            pixelPtr[pi + 0] = reduceVal(pixelPtr[pi + 0]); // B
-            pixelPtr[pi + 1] = reduceVal(pixelPtr[pi + 1]); // G
-            pixelPtr[pi + 2] = reduceVal(pixelPtr[pi + 2]); // R
+            pixelPtr[pi + 0] = reduceBGR(pixelPtr[pi + 0]); // B
+            pixelPtr[pi + 1] = reduceBGR(pixelPtr[pi + 1]); // G
+            pixelPtr[pi + 2] = reduceBGR(pixelPtr[pi + 2]); // R
         }
     }
 }
@@ -67,21 +67,17 @@ int main()
 
 //    cout << imgStr << endl;
 
-//    int blue = pixColor.val[0];
-//    int green = pixColor.val[1];
-//    int red = pixColor.val[2];
-//    cout << blue << green << red << endl;
-
-
-
 //    ------------------------------------------
     HuffEncoder huff;
-//    string text /*= "Huffman coding is a data compression algorithm."*/;
-//    cin >> text;
-
 
 /// Jose, binEncoded es el binario que va hacia las RAIDS
     string binEncoded = huff.buildHuffmanTree(imgStr);
+
+//  Decodificar
+    int index = -1;
+    while (index < (int)binEncoded.size() - 2) {
+        huff.decode(huff.getRoot(), index, binEncoded);
+    }
 
     return 0;
 }
