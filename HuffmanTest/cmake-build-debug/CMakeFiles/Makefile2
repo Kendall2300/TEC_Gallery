@@ -54,10 +54,10 @@ RM = /home/dlurena24/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dlurena24/Documents/Tests/HuffmanTest
+CMAKE_SOURCE_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/HuffmanTest.dir/clean
 CMakeFiles/HuffmanTest.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target HuffmanTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=1,2,3,4 "Built target HuffmanTest"
 .PHONY : CMakeFiles/HuffmanTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/HuffmanTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/HuffmanTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" 0
 .PHONY : CMakeFiles/HuffmanTest.dir/rule
 
 # Convenience name for target.

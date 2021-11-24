@@ -42,7 +42,7 @@ void HuffEncoder::decode(Node* root, int &index, string str)
         decode(root->right, index, str);
 }
 
-void HuffEncoder::buildHuffmanTree(string text)
+string HuffEncoder::buildHuffmanTree(string text)
 {
     // count frequency of appearance of each character
     // and store it in a map
@@ -90,23 +90,24 @@ void HuffEncoder::buildHuffmanTree(string text)
         cout << pair.first << " " << pair.second << '\n';
     }
 
-    cout << "\nOriginal string was :\n" << text << '\n';
+//    cout << "\nOriginal string was :\n" << text << '\n';
 
     // print encoded string
-    string str = "";
+    string binCode;
     for (char ch: text) {
-        str += huffmanCode[ch];
+        binCode += huffmanCode[ch];
     }
 
-    cout << "\nEncoded string is :\n" << str << '\n';
+    cout << "\nEncoded string is :\n" << binCode << '\n';
+    return binCode;
 
     // traverse the Huffman Tree again and this time
     // decode the encoded string
-    int index = -1;
-    cout << "\nDecoded string is: \n";
-    while (index < (int)str.size() - 2) {
-        decode(root, index, str);
-    }
+//    int index = -1;
+//    cout << "\nDecoded string is: \n";
+//    while (index < (int)str.size() - 2) {
+//        decode(root, index, str);
+//    }
 }
 
 

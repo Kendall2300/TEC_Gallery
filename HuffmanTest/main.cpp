@@ -65,7 +65,8 @@ int main()
         }
     }
 
-    cout << imgStr << endl;
+//    cout << imgStr << endl;
+
 //    int blue = pixColor.val[0];
 //    int green = pixColor.val[1];
 //    int red = pixColor.val[2];
@@ -77,7 +78,10 @@ int main()
     HuffEncoder huff;
 //    string text /*= "Huffman coding is a data compression algorithm."*/;
 //    cin >> text;
-    huff.buildHuffmanTree(imgStr);
+
+
+/// Jose, binEncoded es el binario que va hacia las RAIDS
+    string binEncoded = huff.buildHuffmanTree(imgStr);
 
     return 0;
 }

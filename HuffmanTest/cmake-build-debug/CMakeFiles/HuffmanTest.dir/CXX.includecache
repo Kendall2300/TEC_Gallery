@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/dlurena24/Documents/Tests/HuffmanTest/HuffEncoder.h
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.h
 string
 -
 queue
@@ -14,11 +14,11 @@ queue
 unordered_map
 -
 
-/home/dlurena24/Documents/Tests/HuffmanTest/img2stringTraductor.h
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.h
 string
 -
 
-/home/dlurena24/Documents/Tests/HuffmanTest/main.cpp
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/main.cpp
 iostream
 -
 string
@@ -28,15 +28,15 @@ queue
 unordered_map
 -
 HuffEncoder.h
-/home/dlurena24/Documents/Tests/HuffmanTest/HuffEncoder.h
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.h
 opencv2/core/core.hpp
-/home/dlurena24/Documents/Tests/HuffmanTest/opencv2/core/core.hpp
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/opencv2/core/core.hpp
 opencv2/highgui/highgui.hpp
-/home/dlurena24/Documents/Tests/HuffmanTest/opencv2/highgui/highgui.hpp
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/dlurena24/Documents/Tests/HuffmanTest/opencv2/imgproc/imgproc.hpp
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/opencv2/imgproc/imgproc.hpp
 img2stringTraductor.h
-/home/dlurena24/Documents/Tests/HuffmanTest/img2stringTraductor.h
+/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.h
 opencv2/opencv.hpp
 -
 

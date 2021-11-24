@@ -57,10 +57,10 @@ RM = /home/dlurena24/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dlurena24/Documents/Tests/HuffmanTest
+CMAKE_SOURCE_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug/CMakeFiles /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dlurena24/Documents/Tests/HuffmanTest/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
