@@ -50,12 +50,17 @@ void MainWindow::on_label_3_linkActivated(const QString &link)
 }
 
 
+int principal();
+int principal2();
 
 QString username;
 QString password;
+QString filename;
 QString newfolder;
 QString folder;
 QString _path= "../Tec_Gallery/Galerias/"+username+"/"+folder;
+QString _path2= "../Tec_Gallery/Galerias/"+username+"/"+folder+"/";
+std::string _path3="../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/";
 
 void MainWindow::on_SignIn_clicked()
 {
@@ -101,7 +106,7 @@ void MainWindow::on_label_6_linkActivated(const QString &link)
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString filename= QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+    filename= QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
         if (QString::compare(filename, QString()) !=0)
         {
             QImage image;
@@ -114,13 +119,15 @@ void MainWindow::on_pushButton_clicked()
             {
                 // Error
             }
+
          }
+    principal();
 }
 
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    QString filename= QFileDialog::getOpenFileName(this, tr("Change"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+     filename= QFileDialog::getOpenFileName(this, tr("Change"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
         if (QString::compare(filename, QString()) !=0)
         {
             QImage image;
@@ -141,9 +148,21 @@ void MainWindow::on_pushButton_5_clicked()
 {
    newfolder = ui->line_new->text();
    std::string foldername;
-   foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString();
+   foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk0";
    const char *path=foldername.c_str();
    system(path);
+   std::string foldername2;
+   foldername2 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk1";
+   const char *path2=foldername2.c_str();
+   system(path2);
+   std::string foldername3;
+   foldername3 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk2";
+   const char *path3=foldername3.c_str();
+   system(path3);
+   std::string foldername4;
+   foldername4 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk3";
+   const char *path4=foldername4.c_str();
+   system(path4);
    QMessageBox::information(this, "New folder", "Folder cretaed");
    ui->line_new->setText("");
 
@@ -228,7 +247,7 @@ void division(string num, int pdd, int img)
     }
     for(int s = 0; s<3; s++)
     {
-        myFile.open("../RAID/Disk"+discos[s]+"/Imagen"+ to_string(img)+".txt", ios::out);
+        myFile.open(_path3+"Disk"+discos[s]+"/"+filename.toStdString()+".txt", ios::out);
         if(myFile.is_open()){
             myFile<<lista[s];
             myFile.close();
@@ -263,7 +282,7 @@ void paridad(int pdd, int img)
     }
     while(k!=3)
     {
-        myFile.open("../RAID/Disk"+discos[k]+"/Imagen"+ to_string(img)+".txt", ios::in);
+        myFile.open(_path3+"Disk"+discos[k]+"/"+filename.toStdString()+".txt", ios::in);
         if(k == 0)
         {
             getline(myFile, A0);
@@ -337,7 +356,7 @@ void paridad(int pdd, int img)
             continue;
         }
     }
-    myFile.open("../RAID/Disk"+ to_string(pdd)+"/Paridad"+ to_string(img)+".txt", ios::out);
+    myFile.open(_path3+"Disk"+to_string(pdd)+"/"+filename.toStdString()+".txt", ios::out);
     if(myFile.is_open()){
         myFile<<paridad;
         myFile.close();
@@ -429,7 +448,7 @@ string filesImg(int pdd, int img)
         discos = {"0", "1", "2"};
     }
     while(k!=3) {
-        myFile.open("../RAID/Disk" + discos[k] + "/Imagen" + to_string(img) + ".txt", ios::in);
+        myFile.open(_path3+"Disk"+discos[k]+"/"+filename.toStdString()+".txt", ios::in);
         getline(myFile, file);
         bina += file;
         myFile.close();
@@ -438,16 +457,19 @@ string filesImg(int pdd, int img)
     return bina;
 }
 
+int pdd = 3;
+int numI = 1;
+HuffEncoder huff;
+
 int principal() {
 
 /// inPath es el path de la imagen, outPath el el nombre del path del archivo final
-    string inPath = "../ImgPrueba3.jpeg";
-    string outPath = "../bruhhhh.png";
+    string inPath = filename.toStdString();
     string imgStr = mat2str(inPath);
     cout << "Coded image string:\n" << imgStr << endl;
 
 //    ------------------------------------------
-    HuffEncoder huff;
+
 
 /// A RAIDS
 /// Jose, binEncoded es el binario que va hacia las RAIDS
@@ -457,11 +479,12 @@ int principal() {
     {
         binEncoded = binEncoded + 'a';
     }
-    int pdd = 3;
-    int numI = 1;
     division(binEncoded, pdd, numI);
     paridad(pdd, numI);
+}
 
+int principal2(){
+    string outPath = _path2.toStdString()+"bruhhhh.png";
 /// Desde RAIDS
 /// Inicia la decodificación
 
@@ -483,3 +506,9 @@ int principal() {
 
     return 0;
 }
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    principal2();
+}
+
