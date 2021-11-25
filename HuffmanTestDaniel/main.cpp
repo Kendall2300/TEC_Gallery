@@ -9,6 +9,7 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "img2stringTraductor.h"
 #include "string2imgTraductor.h"
+#include <fstream>
 
 
 
@@ -196,7 +197,8 @@ void paridad(int pdd, int img)
     }
 }
 
-int main() {
+int irows, icols;
+string mat2str(){
     Mat img;
     string imgStr, incomStr;
     img2stringTraductor trad;
@@ -208,8 +210,8 @@ int main() {
     imshow("Image", img);
     waitKey(0);
 
-    int irows = img.rows;
-    int icols = img.cols;
+    irows = img.rows;
+    icols = img.cols;
 
     for (int i = 0; i < irows; i++) {
         for (int j = 0; j < icols; j++) {
@@ -220,55 +222,21 @@ int main() {
 
             incomStr = trad.Traslate(blue, green, red);
             imgStr += incomStr;
+
         }
     }
+    return imgStr;
 
-    cout << imgStr << endl;
+}
 
-//    ------------------------------------------
-    HuffEncoder huff;
+void str2mat(string incomingBin){
 
-/// A RAIDS
-/// Jose, binEncoded es el binario que va hacia las RAIDS
-    string binEncoded = huff.buildHuffmanTree(imgStr);
-
-    while(binEncoded.length()%3!=0)
-    {
-        binEncoded = binEncoded + 'a';
-    }
-    int pdd = 3;
-    int numI = 1;
-    division(binEncoded, pdd, numI);
-    paridad(pdd, numI);
-
-
-/// Desde RAIDS
-/// Inicia la decodificación
-
-//  Cambiar con la integración
-    string incomBinEncoded;
-    incomBinEncoded = binEncoded;
-
-//  Decodificar
-//    string fromBin;
-//    int index = -1;
-//    while (index < (int) binEncoded.size() - 2) {
-//        huff.decode(huff.getRoot(), index, binEncoded);
-//    }
-
-    toDecode(huff, incomBinEncoded);
-
-//  String Recibido del decodificador
-
-    string fromBin;
-    fromBin = huff.getG();
-    cout << fromBin << "\n";
 
 //    ------------------------------------------Opencv Out
     Mat retImg(irows, icols, CV_8UC3, Scalar(0, 0, 0));
     string2imgTraductor tradOut;
 
-    string toColorStr = fromBin;
+    string toColorStr = incomingBin;
 
     for (int i = 0; i < irows; i++)
     {
@@ -289,6 +257,47 @@ int main() {
     imwrite("../bruhhhh.png", retImg);
     imshow("Image",retImg);
     waitKey(0);
+}
+
+int main() {
+
+    string imgStr = mat2str();
+    cout << "Coded image string:\n" << imgStr << endl;
+
+//    ------------------------------------------
+    HuffEncoder huff;
+
+/// A RAIDS
+/// Jose, binEncoded es el binario que va hacia las RAIDS
+    string binEncoded = huff.buildHuffmanTree(imgStr);
+
+    while(binEncoded.length()%3!=0)
+    {
+        binEncoded = binEncoded + 'a';
+    }
+    int pdd = 3;
+    int numI = 1;
+    division(binEncoded, pdd, numI);
+    paridad(pdd, numI);
+
+/// Desde RAIDS
+/// Inicia la decodificación
+
+//  Cambiar con la integración
+    string incomBinEncoded;
+    incomBinEncoded = binEncoded;
+
+//  Manda a decodificar el binario
+    cout << "Loading decoded binary...\n";
+    toDecode(huff, incomBinEncoded);
+
+//  String Recibido del decodificador
+    string fromBin;
+    fromBin = huff.getG();
+    cout << fromBin << "\n";
+
+//  Opencv Out
+    str2mat(fromBin);
 
     return 0;
 }
