@@ -10,6 +10,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 find_package(libmongocxx REQUIRED)
 find_package(libbsoncxx REQUIRED)
 find_package(Qt6Widgets REQUIRED)
+find_package( OpenCV REQUIRED )
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -29,3 +30,4 @@ add_executable(TEC_Gallery main.cpp mainwindow.cpp mainwindow.h mainwindow.ui se
 target_link_libraries(TEC_Gallery ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(TEC_Gallery ${LIBBSONCXX_LIBRARIES})
 target_link_libraries(TEC_Gallery Qt6::Widgets)
+target_link_libraries(TEC_Gallery ${OpenCV_LIBS} )

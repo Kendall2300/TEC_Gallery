@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>882</width>
+    <width>447</width>
     <height>474</height>
    </rect>
   </property>
@@ -16,10 +16,10 @@
   <widget class="QLabel" name="labelimage">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>811</width>
-     <height>291</height>
+     <x>40</x>
+     <y>50</y>
+     <width>371</width>
+     <height>321</height>
     </rect>
    </property>
    <property name="text">
@@ -29,9 +29,9 @@
   <widget class="QPushButton" name="InsertBu">
    <property name="geometry">
     <rect>
-     <x>90</x>
+     <x>140</x>
      <y>400</y>
-     <width>89</width>
+     <width>111</width>
      <height>25</height>
     </rect>
    </property>
@@ -42,9 +42,9 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>400</y>
-     <width>89</width>
+     <x>140</x>
+     <y>440</y>
+     <width>111</width>
      <height>25</height>
     </rect>
    </property>
@@ -55,16 +55,51 @@
   <widget class="QPushButton" name="ChangeBu">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>280</x>
      <y>400</y>
-     <width>121</width>
+     <width>111</width>
      <height>25</height>
     </rect>
    </property>
    <property name="text">
-    <string>Change Image</string>
+    <string>Up</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>440</y>
+     <width>111</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Change image</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>451</width>
+     <height>481</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>Since.png</pixmap>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>labelimage</zorder>
+  <zorder>InsertBu</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>ChangeBu</zorder>
+  <zorder>pushButton</zorder>
  </widget>
  <resources/>
  <connections/>
