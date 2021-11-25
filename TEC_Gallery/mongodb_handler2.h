@@ -86,7 +86,7 @@ namespace Metadata {
                 std::cout<<"Image not found"<<std::endl;
             }
         }
-        bool updatePassword(const std::string &img_name,
+        bool updateMetadata(const std::string &img_name,
                             const std::string &new_img_name,
                             const std::string &new_autor,
                             const std::string &new_creation_year,

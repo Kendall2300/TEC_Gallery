@@ -1,0 +1,37 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/home/kendall/Qt/Tools/Ninja/ninja cmTC_5c9e7 && [1/2] Building C object CMakeFiles/cmTC_5c9e7.dir/src.c.o
+[2/2] Linking C executable cmTC_5c9e7
+FAILED: cmTC_5c9e7 
+: && /usr/bin/gcc   CMakeFiles/cmTC_5c9e7.dir/src.c.o -o cmTC_5c9e7   && :
+/usr/bin/ld: CMakeFiles/cmTC_5c9e7.dir/src.c.o: en la función `main':
+src.c:(.text+0x46): referencia a `pthread_create' sin definir
+/usr/bin/ld: src.c:(.text+0x52): referencia a `pthread_detach' sin definir
+/usr/bin/ld: src.c:(.text+0x5e): referencia a `pthread_cancel' sin definir
+/usr/bin/ld: src.c:(.text+0x6f): referencia a `pthread_join' sin definir
+collect2: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

@@ -33,14 +33,13 @@ void SignUp::on_pushButton_clicked()
     QString usernamenew = ui->newuser->text();
     QString passwordnew = ui->newpass->text();
 
-
+    mhandler.RemoveUserFromDb("");
     mhandler.AddUserToDb(usernamenew.toStdString(), passwordnew.toStdString());
 
     string foldername;
-    foldername = usernamenew.toStdString();
-    char fname;
-
-    std::filesystem::create_directory("../TEC_Gallery/Galerias/" + foldername);
+    foldername ="mkdir -p ../TEC_Gallery/Galerias/"+usernamenew.toStdString();
+    const char *path=foldername.c_str();
+    system(path);
 
 
     //if (mkdir(foldername.push_back(fname), 0777)==1)
