@@ -192,8 +192,6 @@ TEC_Gallery_autogen/timestamp: \
 	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckCSourceCompiles.cmake \
 	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckCXXCompilerFlag.cmake \
 	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckCXXSourceCompiles.cmake \
-	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckForPthreads.c \
-	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckIncludeFile.c.in \
 	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckIncludeFile.cmake \
 	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/CheckLibraryExists.cmake \
 	/home/kendall/Qt/Tools/CMake/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
@@ -452,6 +450,10 @@ TEC_Gallery_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/sys/types.h \
 	/usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
 	/usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
+	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake \
+	/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake \
 	/usr/local/lib/cmake/libbsoncxx-3.6.6/libbsoncxx-config-version.cmake \
 	/usr/local/lib/cmake/libbsoncxx-3.6.6/libbsoncxx-config.cmake \
 	/usr/local/lib/cmake/libmongocxx-3.6.6/libmongocxx-config-version.cmake \

@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TEC_Gallery",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TEC_Gallery::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TEC_Gallery-Debug-3bb4ab67525161d06ea1.json",
+					"name" : "TEC_Gallery",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TEC_Gallery_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TEC_Gallery_autogen-Debug-ff24917f5c99b902d589.json",
+					"name" : "TEC_Gallery_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TEC_Gallery_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TEC_Gallery_autogen_timestamp_deps-Debug-74e715d7aae7f1e0a46b.json",
+					"name" : "TEC_Gallery_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug",
+		"source" : "/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
