@@ -103,10 +103,10 @@ void MainWindow::on_label_6_linkActivated(const QString &link)
     ui->label_6->setText("Logged as: ");
 }
 
-
+//INSERTAR IMAGEN//
 void MainWindow::on_pushButton_clicked()
 {
-    filename= QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+    filename = QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
         if (QString::compare(filename, QString()) !=0)
         {
             QImage image;
@@ -121,6 +121,7 @@ void MainWindow::on_pushButton_clicked()
             }
 
          }
+    QString nameimage = ui->line_nameimage->text();
     principal();
 }
 
