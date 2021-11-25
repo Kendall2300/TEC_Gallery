@@ -28,6 +28,7 @@ namespace Users {
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
+
         bool AddUserToDb(const std::string &user_name,
                               const std::string &user_pass) {
             mongocxx::collection collection = db[kCollectionName];
@@ -73,11 +74,10 @@ namespace Users {
 
             if (user_name==query_user_name){
                 if(password==query_password){
-                 //   return true;
-                 std::cout<<"True"<<std::endl;
+                 //std::cout<<"True"<<std::endl;
                     return true;
                 }
-                std::cout<<"False"<<std::endl;
+                //std::cout<<"False"<<std::endl;
             } else{
                 std::cout<<"Wrong user name"<<std::endl;
             }

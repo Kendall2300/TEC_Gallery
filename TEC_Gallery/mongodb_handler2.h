@@ -1,12 +1,19 @@
+#pragma once
+
 #include <cstdint>
 #include <string>
 #include <iostream>
-#include "bsoncxx/builder/stream/document.hpp"
+#include "vector"
 #include "bsoncxx/json.hpp"
-#include "bsoncxx/oid.hpp"
 #include "mongocxx/client.hpp"
-#include "mongocxx/database.hpp"
+#include "mongocxx/stdx.hpp"
 #include "mongocxx/uri.hpp"
+#include "mongocxx/instance.hpp"
+#include "mongocxx/database.hpp"
+#include "bsoncxx/builder/stream/helpers.hpp"
+#include "bsoncxx/builder/stream/document.hpp"
+#include "bsoncxx/builder/stream/array.hpp"
+
 
 namespace Metadata {
     constexpr char kMongoDbUri[] = "mongodb://0.0.0.0:27017";
@@ -19,6 +26,7 @@ namespace Metadata {
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
+
         bool AddMetadataToDb(const std::string &img_name,
                          const std::string &img_autor,
                          const std::string &creation_year,

@@ -228,6 +228,18 @@
 			null
 		],
 		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/mongodb_handler.h",
+			"MU",
+			"EWIEGA46WW/moc_mongodb_handler.cpp",
+			null
+		],
+		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/mongodb_handler2.h",
+			"MU",
+			"EWIEGA46WW/moc_mongodb_handler2.cpp",
+			null
+		],
+		[
 			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/secondwin.h",
 			"MU",
 			"EWIEGA46WW/moc_secondwin.cpp",

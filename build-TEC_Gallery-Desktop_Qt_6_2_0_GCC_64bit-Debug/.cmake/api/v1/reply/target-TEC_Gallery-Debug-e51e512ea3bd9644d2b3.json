@@ -539,7 +539,9 @@
 				14,
 				15,
 				16,
-				17
+				17,
+				18,
+				19
 			]
 		},
 		{
@@ -550,14 +552,14 @@
 				7,
 				10,
 				13,
-				18
+				20
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				19
+				21
 			]
 		}
 	],
@@ -639,6 +641,16 @@
 			"backtrace" : 1,
 			"path" : "signup.ui",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "mongodb_handler.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "mongodb_handler2.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,

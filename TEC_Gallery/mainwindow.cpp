@@ -15,6 +15,7 @@
 #include <string.h>
 #include <cstdlib>
 #include <stdlib.h>
+#include <mongodb_handler2.h>
 
 
 MainWindow::MainWindow(QWidget *parent)

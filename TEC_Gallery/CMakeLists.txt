@@ -25,7 +25,7 @@ include_directories("/usr/local/include/libmongoc-1.0")
 include_directories("/usr/local/include/libbson-1.0")
 include_directories("/usr/local/lib")
 
-add_executable(TEC_Gallery main.cpp mainwindow.cpp mainwindow.h mainwindow.ui secondwin.h secondwin.cpp secondwin.ui metadata.h metadata.cpp metadata.ui signup.h signup.cpp signup.ui)
+add_executable(TEC_Gallery main.cpp mainwindow.cpp mainwindow.h mainwindow.ui secondwin.h secondwin.cpp secondwin.ui metadata.h metadata.cpp metadata.ui signup.h signup.cpp signup.ui mongodb_handler.h mongodb_handler2.h)
 
 target_link_libraries(TEC_Gallery ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(TEC_Gallery ${LIBBSONCXX_LIBRARIES})
