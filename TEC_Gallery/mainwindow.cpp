@@ -6,6 +6,16 @@
 #include "secondwin.h"
 #include "signup.h"
 #include "mongodb_handler.h"
+#include "QFileDialog"
+#include <iostream>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <bits/stdc++.h>
+#include <filesystem>
+#include <string.h>
+#include <cstdlib>
+#include <stdlib.h>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -27,14 +37,18 @@ void MainWindow::on_label_3_linkActivated(const QString &link)
 
 
 
+QString username;
+QString password;
+QString newfolder;
+QString folder;
 
 
 void MainWindow::on_SignIn_clicked()
 {
     mongocxx::instance instance;
     Users::MongoDbUserHandler mhandler;
-    QString username = ui->line_User->text();
-    QString password = ui->line_Pass->text();
+    username = ui->line_User->text();
+    password = ui->line_Pass->text();
 
     bool verificate = mhandler.getUserPass(username.toStdString(), password.toStdString());
 
@@ -64,5 +78,59 @@ void MainWindow::on_SignUp_clicked()
 void MainWindow::on_label_6_linkActivated(const QString &link)
 {
     ui->label_6->setText("Logged as: ");
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    QString filename= QFileDialog::getOpenFileName(this, tr("Insert"), "../Tec_Gallery/Galerias/"+username, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+        if (QString::compare(filename, QString()) !=0)
+        {
+            QImage image;
+            bool vallid = image.load(filename);
+            if (vallid)        {
+                image = image.scaledToWidth(ui->label_8->width(), Qt::SmoothTransformation);
+                ui->label_8->setPixmap(QPixmap::fromImage(image));
+            }
+            else
+            {
+                // Error
+            }
+         }
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QString filename= QFileDialog::getOpenFileName(this, tr("Change"), "../Tec_Gallery/Galerias/"+username+folder, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+        if (QString::compare(filename, QString()) !=0)
+        {
+            QImage image;
+            bool vallid = image.load(filename);
+            if (vallid)        {
+                image = image.scaledToWidth(ui->label_8->width(), Qt::SmoothTransformation);
+                ui->label_8->setPixmap(QPixmap::fromImage(image));
+            }
+            else
+            {
+                // Error
+            }
+         }
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+   newfolder = ui->line_new->text();
+   std::string foldername;
+   foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+newfolder.toStdString();
+   const char *path=foldername.c_str();
+   system(path);
+}
+
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    folder = ui->line_folder->text();
 }
 

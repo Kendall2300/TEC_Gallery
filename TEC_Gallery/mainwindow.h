@@ -28,6 +28,14 @@ private slots:
 
     void on_label_6_linkActivated(const QString &link);
 
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
 private:
     Ui::MainWindow *ui;
     SignUp *signup;
