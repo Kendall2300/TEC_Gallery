@@ -37,6 +37,14 @@ void processColors(Mat& img)
     }
 }
 
+void toDecode(HuffEncoder inhuff, string inbinEncoded) {
+//    string fromBin;
+    int index = -1;
+    while (index < (int) inbinEncoded.size() - 2) {
+        inhuff.decode(inhuff.getRoot(), index, inbinEncoded);
+    }
+};
+
 int main() {
     Mat img;
     string imgStr, incomStr;
@@ -73,14 +81,19 @@ int main() {
     string binEncoded = huff.buildHuffmanTree(imgStr);
 
 //  Decodificar
-    string fromBin;
-    int index = -1;
-    while (index < (int) binEncoded.size() - 2) {
-        huff.decode(huff.getRoot(), index, binEncoded);
-    }
+//    string fromBin;
+//    int index = -1;
+//    while (index < (int) binEncoded.size() - 2) {
+//        huff.decode(huff.getRoot(), index, binEncoded);
+//    }
+
+    toDecode(huff, binEncoded);
 
 //  String Recibido del decodificador
+
+    string fromBin;
     fromBin = huff.getG();
+    cout << fromBin << "\n";
 
 //    ------------------------------------------Opencv Out
     Mat retImg(irows, icols, CV_8UC3, Scalar(0, 0, 0));
