@@ -53,10 +53,10 @@ RM = /home/dlurena24/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest"
+CMAKE_SOURCE_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/HuffmanTest.dir/depend.make
@@ -68,68 +68,81 @@ include CMakeFiles/HuffmanTest.dir/flags.make
 
 CMakeFiles/HuffmanTest.dir/main.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
 CMakeFiles/HuffmanTest.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HuffmanTest.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/main.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/HuffmanTest.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/main.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/main.cpp"
 
 CMakeFiles/HuffmanTest.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/main.cpp" > CMakeFiles/HuffmanTest.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/main.cpp" > CMakeFiles/HuffmanTest.dir/main.cpp.i
 
 CMakeFiles/HuffmanTest.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/main.cpp" -o CMakeFiles/HuffmanTest.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/main.cpp" -o CMakeFiles/HuffmanTest.dir/main.cpp.s
 
 CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
 CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o: ../HuffEncoder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp"
 
 CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.cpp" > CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp" > CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.i
 
 CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.cpp" -o CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp" -o CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.s
 
 CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
 CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o: ../img2stringTraductor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp"
 
 CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.cpp" > CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp" > CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.i
 
 CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.cpp" -o CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp" -o CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s
 
 CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
 CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o: ../HuffDecoder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffDecoder.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp"
 
 CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffDecoder.cpp" > CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp" > CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i
 
 CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffDecoder.cpp" -o CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp" -o CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s
 
 CMakeFiles/HuffmanTest.dir/Huffman.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
 CMakeFiles/HuffmanTest.dir/Huffman.cpp.o: ../Huffman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/Huffman.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/Huffman.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/Huffman.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp"
 
 CMakeFiles/HuffmanTest.dir/Huffman.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/Huffman.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/Huffman.cpp" > CMakeFiles/HuffmanTest.dir/Huffman.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp" > CMakeFiles/HuffmanTest.dir/Huffman.cpp.i
 
 CMakeFiles/HuffmanTest.dir/Huffman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/Huffman.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/Huffman.cpp" -o CMakeFiles/HuffmanTest.dir/Huffman.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp" -o CMakeFiles/HuffmanTest.dir/Huffman.cpp.s
+
+CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
+CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o: ../string2imgTraductor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp"
+
+CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp" > CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.i
+
+CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp" -o CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.s
 
 # Object files for target HuffmanTest
 HuffmanTest_OBJECTS = \
@@ -137,7 +150,8 @@ HuffmanTest_OBJECTS = \
 "CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o" \
 "CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o" \
 "CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o" \
-"CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
+"CMakeFiles/HuffmanTest.dir/Huffman.cpp.o" \
+"CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
 
 # External object files for target HuffmanTest
 HuffmanTest_EXTERNAL_OBJECTS =
@@ -147,6 +161,7 @@ HuffmanTest: CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/Huffman.cpp.o
+HuffmanTest: CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/build.make
 HuffmanTest: /usr/local/lib/libopencv_gapi.so.4.5.4
 HuffmanTest: /usr/local/lib/libopencv_highgui.so.4.5.4
@@ -164,7 +179,7 @@ HuffmanTest: /usr/local/lib/libopencv_flann.so.4.5.4
 HuffmanTest: /usr/local/lib/libopencv_imgproc.so.4.5.4
 HuffmanTest: /usr/local/lib/libopencv_core.so.4.5.4
 HuffmanTest: CMakeFiles/HuffmanTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable HuffmanTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable HuffmanTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HuffmanTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -176,6 +191,6 @@ CMakeFiles/HuffmanTest.dir/clean:
 .PHONY : CMakeFiles/HuffmanTest.dir/clean
 
 CMakeFiles/HuffmanTest.dir/depend:
-	cd "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles/HuffmanTest.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/HuffmanTest.dir/depend
 

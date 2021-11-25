@@ -8,11 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffDecoder.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o"
-  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/HuffEncoder.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
-  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/Huffman.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
-  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/img2stringTraductor.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
-  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/main.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles/HuffmanTest.dir/main.cpp.o"
+  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o"
+  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
+  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
+  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
+  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/main.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/main.cpp.o"
+  "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -18,6 +18,7 @@ CMakeFiles/HuffmanTest.dir/main.cpp.o: \
  ../HuffEncoder.h \
  ../img2stringTraductor.h \
  ../main.cpp \
+ ../string2imgTraductor.h \
  /usr/local/include/opencv4/opencv2/calib3d.hpp \
  /usr/local/include/opencv4/opencv2/core.hpp \
  /usr/local/include/opencv4/opencv2/core/affine.hpp \
@@ -124,3 +125,6 @@ CMakeFiles/HuffmanTest.dir/main.cpp.o: \
  /usr/local/include/opencv4/opencv2/video/background_segm.hpp \
  /usr/local/include/opencv4/opencv2/video/tracking.hpp \
  /usr/local/include/opencv4/opencv2/videoio.hpp
+CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o: \
+ ../string2imgTraductor.cpp \
+ ../string2imgTraductor.h

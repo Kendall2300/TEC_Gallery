@@ -7,6 +7,7 @@
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "img2stringTraductor.h"
+#include "string2imgTraductor.h"
 
 #include <opencv2/opencv.hpp>
 
@@ -65,7 +66,7 @@ int main()
         }
     }
 
-//    cout << imgStr << endl;
+    cout << imgStr << endl;
 
 //    ------------------------------------------
     HuffEncoder huff;
@@ -74,10 +75,36 @@ int main()
     string binEncoded = huff.buildHuffmanTree(imgStr);
 
 //  Decodificar
+    string fromBin;
     int index = -1;
     while (index < (int)binEncoded.size() - 2) {
         huff.decode(huff.getRoot(), index, binEncoded);
     }
+
+//  String Recibido del decodificador
+    fromBin = huff.getG();
+
+//    ------------------------------------------Opencv Out
+    Mat retImg(irows, icols, CV_8UC3, Scalar(0,0,0));
+    string2imgTraductor tradOut;
+
+//    for (int i = 0; i < irows; i++)
+//    {
+//        for (int j = 0; j < icols; j++)
+//        {
+//            incomStr = tradOut.traslateBack(fromBin);
+//            Vec3b pixColorOut = img.at<Vec3b>(i, j);
+//            int blueOut = pixColorOut.val[0];
+//            int greenOut = pixColorOut.val[1];
+//            int redOut = pixColorOut.val[2];
+//
+//
+////            imgStr += incomStr;
+//        }
+//    }
+
+    imshow("Image",retImg);
+    waitKey(0);
 
     return 0;
 }

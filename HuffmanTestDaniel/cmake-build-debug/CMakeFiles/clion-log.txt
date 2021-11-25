@@ -1,4 +1,4 @@
-/home/dlurena24/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest"
+/home/dlurena24/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug
+-- Build files have been written to: /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug

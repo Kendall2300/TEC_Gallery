@@ -20,19 +20,21 @@ void HuffEncoder::encode(Node* root, string str, unordered_map<char, string> &hu
     encode(root->left, str + "0", huffmanCode);
     encode(root->right, str + "1", huffmanCode);
 }
-
+string g;
 //------------------------------------------------------------------------------------------------------------------------
-void HuffEncoder::decode(Node* root, int &index, string str)
-{
-//    cout << "bruh\n";
+void  HuffEncoder::decode(Node* root, int &index, string str){
+
+////    cout << "bruh\n";
     if (root == nullptr) {
-        return;
+         return;
     }
 
     // found a leaf node
     if (!root->left && !root->right)
     {
-        cout << root->ch;
+        char f = root->ch;
+        g.push_back(f);
+//        cout << g << "\n";
         return;
     }
 
@@ -44,6 +46,9 @@ void HuffEncoder::decode(Node* root, int &index, string str)
         decode(root->right, index, str);
 }
 
+string HuffEncoder::getG(){
+    return g;
+}
 //---------------------------------------------------------------------------------------------------------------
 string HuffEncoder::buildHuffmanTree(string text)
 {
@@ -97,11 +102,10 @@ string HuffEncoder::buildHuffmanTree(string text)
     encode(root, "", huffmanCode);
 
 
-    cout << "Huffman Codes are :\n" << '\n';
-    for (auto pair: huffmanCode) {
-        cout << pair.first << " " << pair.second << '\n';
-    }
-
+//    cout << "Huffman Codes are :\n" << '\n';
+//    for (auto pair: huffmanCode) {
+//        cout << pair.first << " " << pair.second << '\n';
+//    }
 //    cout << "\nOriginal string was :\n" << text << '\n';
 
     // print encoded string

@@ -57,10 +57,10 @@ RM = /home/dlurena24/Downloads/CLion-2021.2.3/clion-2021.2.3/bin/cmake/linux/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest"
+CMAKE_SOURCE_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug"
+CMAKE_BINARY_DIR = "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTest/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -249,6 +249,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+string2imgTraductor.o: string2imgTraductor.cpp.o
+.PHONY : string2imgTraductor.o
+
+# target to build an object file
+string2imgTraductor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o
+.PHONY : string2imgTraductor.cpp.o
+
+string2imgTraductor.i: string2imgTraductor.cpp.i
+.PHONY : string2imgTraductor.i
+
+# target to preprocess a source file
+string2imgTraductor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.i
+.PHONY : string2imgTraductor.cpp.i
+
+string2imgTraductor.s: string2imgTraductor.cpp.s
+.PHONY : string2imgTraductor.s
+
+# target to generate assembly for a file
+string2imgTraductor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/HuffmanTest.dir/build.make CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.s
+.PHONY : string2imgTraductor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... string2imgTraductor.o"
+	@echo "... string2imgTraductor.i"
+	@echo "... string2imgTraductor.s"
 .PHONY : help
 
 
