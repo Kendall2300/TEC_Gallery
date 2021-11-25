@@ -2,6 +2,15 @@
 #include "ui_signup.h"
 #include "mongodb_handler.h"
 #include <iostream>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <bits/stdc++.h>
+#include <filesystem>
+
+
+using namespace std;
+
+
 
 SignUp::SignUp(QWidget *parent) :
     QMainWindow(parent),
@@ -27,7 +36,17 @@ void SignUp::on_pushButton_clicked()
 
     mhandler.AddUserToDb(usernamenew.toStdString(), passwordnew.toStdString());
 
-    this->close();
+    string foldername;
+    foldername = usernamenew.toStdString();
+    char fname;
+
+    std::filesystem::create_directory("../TEC_Gallery/Galerias/" + foldername);
+
+
+    //if (mkdir(foldername.push_back(fname), 0777)==1)
+        //cerr<<
+
+    //this->close();
 }
 
 
