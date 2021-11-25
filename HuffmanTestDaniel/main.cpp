@@ -198,11 +198,11 @@ void paridad(int pdd, int img)
 }
 
 int irows, icols;
-string mat2str(){
+string mat2str(string path){
     Mat img;
     string imgStr, incomStr;
     img2stringTraductor trad;
-    img = imread("../ImgPrueba3.jpeg", IMREAD_COLOR);
+    img = imread(path, IMREAD_COLOR);
 
     // Procesar imagen
     processColors(img);
@@ -229,7 +229,7 @@ string mat2str(){
 
 }
 
-void str2mat(string incomingBin){
+void str2mat(string incomingBin, string outimg){
 
 
 //    ------------------------------------------Opencv Out
@@ -254,7 +254,7 @@ void str2mat(string incomingBin){
         }
     }
 
-    imwrite("../bruhhhh.png", retImg);
+    imwrite(outimg, retImg);
     imshow("Image",retImg);
     waitKey(0);
 }
@@ -293,7 +293,10 @@ string filesImg(int pdd, int img)
 
 int main() {
 
-    string imgStr = mat2str();
+/// inPath es el path de la imagen, outPath el el nombre del path del archivo final
+    string inPath = "../ImgPrueba3.jpeg";
+    string outPath = "../bruhhhh.png";
+    string imgStr = mat2str(inPath);
     cout << "Coded image string:\n" << imgStr << endl;
 
 //    ------------------------------------------
@@ -329,7 +332,7 @@ int main() {
     cout << fromBin << "\n";
 
 //  Opencv Out
-    str2mat(fromBin);
+    str2mat(fromBin, outPath);
 
     return 0;
 }
