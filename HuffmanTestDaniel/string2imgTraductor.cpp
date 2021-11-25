@@ -8,7 +8,6 @@
 using namespace std;
 
 int colorsBGR[3];
-char a = 'A';
 
 void string2imgTraductor::traslateBack(char inStr){
 

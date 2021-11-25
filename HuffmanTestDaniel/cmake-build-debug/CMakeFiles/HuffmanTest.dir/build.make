@@ -105,35 +105,9 @@ CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp" -o CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.s
 
-CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
-CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o: ../HuffDecoder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp"
-
-CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp" > CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.i
-
-CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffDecoder.cpp" -o CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.s
-
-CMakeFiles/HuffmanTest.dir/Huffman.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
-CMakeFiles/HuffmanTest.dir/Huffman.cpp.o: ../Huffman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/HuffmanTest.dir/Huffman.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/Huffman.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp"
-
-CMakeFiles/HuffmanTest.dir/Huffman.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HuffmanTest.dir/Huffman.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp" > CMakeFiles/HuffmanTest.dir/Huffman.cpp.i
-
-CMakeFiles/HuffmanTest.dir/Huffman.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HuffmanTest.dir/Huffman.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/Huffman.cpp" -o CMakeFiles/HuffmanTest.dir/Huffman.cpp.s
-
 CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o: CMakeFiles/HuffmanTest.dir/flags.make
 CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o: ../string2imgTraductor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o -c "/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp"
 
 CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.i: cmake_force
@@ -149,8 +123,6 @@ HuffmanTest_OBJECTS = \
 "CMakeFiles/HuffmanTest.dir/main.cpp.o" \
 "CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o" \
 "CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o" \
-"CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o" \
-"CMakeFiles/HuffmanTest.dir/Huffman.cpp.o" \
 "CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
 
 # External object files for target HuffmanTest
@@ -159,8 +131,6 @@ HuffmanTest_EXTERNAL_OBJECTS =
 HuffmanTest: CMakeFiles/HuffmanTest.dir/main.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o
-HuffmanTest: CMakeFiles/HuffmanTest.dir/HuffDecoder.cpp.o
-HuffmanTest: CMakeFiles/HuffmanTest.dir/Huffman.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o
 HuffmanTest: CMakeFiles/HuffmanTest.dir/build.make
 HuffmanTest: /usr/local/lib/libopencv_gapi.so.4.5.4
@@ -179,7 +149,7 @@ HuffmanTest: /usr/local/lib/libopencv_flann.so.4.5.4
 HuffmanTest: /usr/local/lib/libopencv_imgproc.so.4.5.4
 HuffmanTest: /usr/local/lib/libopencv_core.so.4.5.4
 HuffmanTest: CMakeFiles/HuffmanTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable HuffmanTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable HuffmanTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HuffmanTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
