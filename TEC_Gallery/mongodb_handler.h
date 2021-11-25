@@ -104,14 +104,9 @@ namespace Users {
 
             if (user_name==query_user_name){
                 if(password==query_password){
-                 //   return true;
-                 std::cout<<"True"<<std::endl;
                     return true;
                 }
-                std::cout<<"False"<<std::endl;
-            } else{
-                std::cout<<"Wrong user name"<<std::endl;
-            }
+                return false;
         }
         /**
          * @brief Este metodo se encarga de actualizar la contrasena de un usuario
