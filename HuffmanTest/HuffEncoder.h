@@ -41,7 +41,7 @@ class HuffEncoder {
     };
 
     void encode (Node* root, std::string str, std::unordered_map<char, std::string> &huffmanCode);
-    void decode(Node* root, int &index, std::string str);
+    std::string decode(Node* root, int &index, std::string str);
     std::string buildHuffmanTree(std::string text);
 
 

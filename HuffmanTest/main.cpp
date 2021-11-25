@@ -35,49 +35,76 @@ void processColors(Mat& img)
     }
 }
 
-int main()
-{
+
+
+string procImg(string path, HuffEncoder huff) {
+
     Mat img;
     string imgStr, incomStr;
     img2stringTraductor trad;
-    img = imread("../ImgPrueba3.jpeg", IMREAD_COLOR);
+
+//  Cambiar el nombre al integrar algo
+    img = imread(path, IMREAD_COLOR);
 
     // Procesar imagen
     processColors(img);
 
-    imshow("Image",img);
+    imshow("Image", img);
     waitKey(0);
 
     int irows = img.rows;
     int icols = img.cols;
 
-    for (int i = 0; i < irows; i++)
-    {
-        for (int j = 0; j < icols; j++)
-        {
+    for (int i = 0; i < irows; i++) {
+        for (int j = 0; j < icols; j++) {
             Vec3b pixColor = img.at<Vec3b>(i, j);
-                int blue = pixColor.val[0];
-                int green = pixColor.val[1];
-                int red = pixColor.val[2];
+            int blue = pixColor.val[0];
+            int green = pixColor.val[1];
+            int red = pixColor.val[2];
 
-                incomStr = trad.Traslate(blue, green, red);
-                imgStr += incomStr;
+            incomStr = trad.Traslate(blue, green, red);
+            imgStr += incomStr;
         }
     }
 
 //    cout << imgStr << endl;
 
 //    ------------------------------------------
-    HuffEncoder huff;
+//    HuffEncoder huff;
 
 /// Jose, binEncoded es el binario que va hacia las RAIDS
     string binEncoded = huff.buildHuffmanTree(imgStr);
+    cout << "SIUUUU";
+    return binEncoded;
 
-//  Decodificar
+////  Decodificar
+//    int index = -1;
+//    while (index < (int) binEncoded.size() - 2) {
+//        huff.decode(huff.getRoot(), index, binEncoded);
+//    }
+}
+
+string decodificar(string binEncoded, HuffEncoder huff){
+    cout << "SIUUUU";
     int index = -1;
-    while (index < (int)binEncoded.size() - 2) {
-        huff.decode(huff.getRoot(), index, binEncoded);
+    string binReturn;
+    while (index < (int) binEncoded.size() - 2) {
+        binReturn += huff.decode(huff.getRoot(), index, binEncoded);
     }
+    cout << binReturn << "\n";
+    return binReturn;
+}
+
+int main(){
+    HuffEncoder huff;
+    string toPath = "../ImgPrueba3.jpeg";
+    string bin;
+    cout << "SIUUUU";
+    bin = procImg(toPath,  huff);
+    cout << "SIUUUU";
+    decodificar(bin, huff);
+
+//    decodificar(/*string binEncoded, HuffEncoder huff*/);
 
     return 0;
 }
