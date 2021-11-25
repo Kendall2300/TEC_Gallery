@@ -93,7 +93,7 @@ namespace Metadata {
          * @param img_name A string
          * @return A bool
          */
-        bool getMetadata(const std::string &img_name){
+        std::string getMetadata(const std::string &img_name){
             mongocxx::collection collection = db[kCollectionName];
             bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one({});
 
@@ -111,13 +111,15 @@ namespace Metadata {
             std::string query_description = element5.get_utf8().value.to_string();
 
             if (img_name==query_img_name){
-                std::cout<<query_img_name<<std::endl;
-                std::cout<<query_autor<<std::endl;
-                std::cout<<query_creation_year<<std::endl;
-                std::cout<<query_height<<std::endl;
-                std::cout<<query_description<<std::endl;
+                std::string resultado;
+                resultado = "Nombre de la imagen: "+query_img_name+"\n"
+                        + "Autor: "+query_autor+"\n"
+                        + "Año de creacion: "+query_creation_year+"\n"
+                        + "Tamaño de la imagen: "+query_height+"\n"
+                        + "Descripcion: "+query_description+"\n";
+                return resultado;
             } else{
-                std::cout<<"Image not found"<<std::endl;
+                return "Imagen no encontrada";
             }
         }
         /**
