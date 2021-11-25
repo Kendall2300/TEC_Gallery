@@ -10,7 +10,10 @@
 
 class string2imgTraductor {
 public:
-    std::string traslateBack(int b, int g, int r);
+    void traslateBack(char inStr);
+    int getB();
+    int getG();
+    int getR();
 };
 
 

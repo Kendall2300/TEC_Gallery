@@ -29,6 +29,8 @@ unordered_map
 -
 HuffEncoder.h
 /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.h
+opencv2/opencv.hpp
+-
 opencv2/core/core.hpp
 /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/opencv2/core/core.hpp
 opencv2/highgui/highgui.hpp
@@ -39,8 +41,6 @@ img2stringTraductor.h
 /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.h
 string2imgTraductor.h
 /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.h
-opencv2/opencv.hpp
--
 
 /home/dlurena24/Documents/TEC DOCS/DATOS II/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.h
 string

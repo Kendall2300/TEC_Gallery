@@ -78,7 +78,7 @@ string img2stringTraductor::Traslate(int b, int g, int r){
                 return colorString;
             }
             if(r == 255){
-                colorString = "Ñ";
+                colorString = ".";
                 return colorString;
             }
         }

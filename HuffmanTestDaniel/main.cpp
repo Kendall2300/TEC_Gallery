@@ -3,13 +3,14 @@
 #include <queue>
 #include <unordered_map>
 #include "HuffEncoder.h"
+#include <opencv2/opencv.hpp>
 #include "opencv2/core/core.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
 #include "img2stringTraductor.h"
 #include "string2imgTraductor.h"
 
-#include <opencv2/opencv.hpp>
+
 
 using namespace std;
 using namespace cv;
@@ -36,8 +37,7 @@ void processColors(Mat& img)
     }
 }
 
-int main()
-{
+int main() {
     Mat img;
     string imgStr, incomStr;
     img2stringTraductor trad;
@@ -46,23 +46,21 @@ int main()
     // Procesar imagen
     processColors(img);
 
-    imshow("Image",img);
+    imshow("Image", img);
     waitKey(0);
 
     int irows = img.rows;
     int icols = img.cols;
 
-    for (int i = 0; i < irows; i++)
-    {
-        for (int j = 0; j < icols; j++)
-        {
+    for (int i = 0; i < irows; i++) {
+        for (int j = 0; j < icols; j++) {
             Vec3b pixColor = img.at<Vec3b>(i, j);
-                int blue = pixColor.val[0];
-                int green = pixColor.val[1];
-                int red = pixColor.val[2];
+            int blue = pixColor.val[0];
+            int green = pixColor.val[1];
+            int red = pixColor.val[2];
 
-                incomStr = trad.Traslate(blue, green, red);
-                imgStr += incomStr;
+            incomStr = trad.Traslate(blue, green, red);
+            imgStr += incomStr;
         }
     }
 
@@ -77,7 +75,7 @@ int main()
 //  Decodificar
     string fromBin;
     int index = -1;
-    while (index < (int)binEncoded.size() - 2) {
+    while (index < (int) binEncoded.size() - 2) {
         huff.decode(huff.getRoot(), index, binEncoded);
     }
 
@@ -85,24 +83,28 @@ int main()
     fromBin = huff.getG();
 
 //    ------------------------------------------Opencv Out
-    Mat retImg(irows, icols, CV_8UC3, Scalar(0,0,0));
+    Mat retImg(irows, icols, CV_8UC3, Scalar(0, 0, 0));
     string2imgTraductor tradOut;
 
-//    for (int i = 0; i < irows; i++)
-//    {
-//        for (int j = 0; j < icols; j++)
-//        {
-//            incomStr = tradOut.traslateBack(fromBin);
-//            Vec3b pixColorOut = img.at<Vec3b>(i, j);
-//            int blueOut = pixColorOut.val[0];
-//            int greenOut = pixColorOut.val[1];
-//            int redOut = pixColorOut.val[2];
-//
-//
-////            imgStr += incomStr;
-//        }
-//    }
+    string toColorStr = fromBin;
 
+    for (int i = 0; i < irows; i++)
+    {
+        for (int j = 0; j < icols; j++)
+        {
+            char evalLetter = toColorStr[0];
+            tradOut.traslateBack(evalLetter);
+            Vec3b & color = retImg.at<Vec3b>(i,j);
+
+            color[0] = tradOut.getB();
+            color[1] = tradOut.getG();
+            color[2] = tradOut.getR();
+
+            toColorStr.erase(0,1);
+        }
+    }
+
+    imwrite("../bruhhhh.png", retImg);
     imshow("Image",retImg);
     waitKey(0);
 
