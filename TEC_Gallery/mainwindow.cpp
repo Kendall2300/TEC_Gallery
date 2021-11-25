@@ -60,7 +60,7 @@ QString newfolder;
 QString folder;
 QString _path= "../Tec_Gallery/Galerias/"+username+"/"+folder;
 QString _path2= "../Tec_Gallery/Galerias/"+username+"/"+folder+"/";
-std::string _path3="../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/";
+QString _path3="../TEC_Gallery/Galerias/"+username+"/"+folder+"/RAID/";
 
 void MainWindow::on_SignIn_clicked()
 {
@@ -247,7 +247,7 @@ void division(string num, int pdd, int img)
     }
     for(int s = 0; s<3; s++)
     {
-        myFile.open(_path3+"Disk"+discos[s]+"/"+filename.toStdString()+".txt", ios::out);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[s]+"/Imagen1"+".txt", ios::out);
         if(myFile.is_open()){
             myFile<<lista[s];
             myFile.close();
@@ -282,7 +282,7 @@ void paridad(int pdd, int img)
     }
     while(k!=3)
     {
-        myFile.open(_path3+"Disk"+discos[k]+"/"+filename.toStdString()+".txt", ios::in);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/Imagen1"+".txt", ios::in);
         if(k == 0)
         {
             getline(myFile, A0);
@@ -356,7 +356,7 @@ void paridad(int pdd, int img)
             continue;
         }
     }
-    myFile.open(_path3+"Disk"+to_string(pdd)+"/"+filename.toStdString()+".txt", ios::out);
+    myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+to_string(pdd)+"/Imagen1"+".txt", ios::out);
     if(myFile.is_open()){
         myFile<<paridad;
         myFile.close();
@@ -448,7 +448,7 @@ string filesImg(int pdd, int img)
         discos = {"0", "1", "2"};
     }
     while(k!=3) {
-        myFile.open(_path3+"Disk"+discos[k]+"/"+filename.toStdString()+".txt", ios::in);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/Imagen1"+".txt", ios::in);
         getline(myFile, file);
         bina += file;
         myFile.close();
@@ -466,7 +466,7 @@ int principal() {
 /// inPath es el path de la imagen, outPath el el nombre del path del archivo final
     string inPath = filename.toStdString();
     string imgStr = mat2str(inPath);
-    cout << "Coded image string:\n" << imgStr << endl;
+    cout << "Coded image string:\n" << "Imagen lista" << endl;
 
 //    ------------------------------------------
 
@@ -481,10 +481,11 @@ int principal() {
     }
     division(binEncoded, pdd, numI);
     paridad(pdd, numI);
+
 }
 
 int principal2(){
-    string outPath = _path2.toStdString()+"bruhhhh.png";
+    string outPath = "../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/bruhhhh.png";
 /// Desde RAIDS
 /// Inicia la decodificación
 

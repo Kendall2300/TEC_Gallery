@@ -73,6 +73,7 @@ namespace Users {
             std::string query_user_name = element2.get_utf8().value.to_string();
 
             if (user_name==query_user_name){
+
                 if(password==query_password){
                  //std::cout<<"True"<<std::endl;
                     return true;

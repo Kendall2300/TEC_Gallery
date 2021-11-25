@@ -34,7 +34,7 @@ void SignUp::on_pushButton_clicked()
     QString usernamenew = ui->newuser->text();
     QString passwordnew = ui->newpass->text();
 
-    mhandler.RemoveUserFromDb("");
+
     mhandler.AddUserToDb(usernamenew.toStdString(), passwordnew.toStdString());
 
     string foldername;
