@@ -1,0 +1,5 @@
+/home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug/CMakeFiles/TEC_Gallery.dir
+/home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug/CMakeFiles/TEC_Gallery_autogen_timestamp_deps.dir
+/home/kendall/Escritorio/Proyectos/TEC_Gallery/build-TEC_Gallery-Desktop_Qt_6_2_0_GCC_64bit-Debug/CMakeFiles/TEC_Gallery_autogen.dir
