@@ -24,7 +24,6 @@ string g;
 //------------------------------------------------------------------------------------------------------------------------
 void  HuffEncoder::decode(Node* root, int &index, string str){
 
-////    cout << "bruh\n";
     if (root == nullptr) {
          return;
     }

@@ -1,3 +1,10 @@
+/**
+ * @file mainwindow.h
+ * @authors Kendall Martinez && Gabriel Cerdas
+ * @brief Este codigo contiene las declaraciones de las llamadas necesarias para la metadata de las imagenes
+ *
+ * @version 1.0
+ */
 #ifndef METADATA_H
 #define METADATA_H
 

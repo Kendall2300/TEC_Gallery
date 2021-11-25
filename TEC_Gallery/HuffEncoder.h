@@ -1,7 +1,11 @@
-//
-// Created by dlurena24 on 21/11/21.
-//
-
+/**
+ * @file HuffEncoder.h
+ * @author Daniel Urena
+ * @brief Este codigo contiene la definicion de las clases con sus atributos y metodos para manejar el codigo de Huffman
+ *
+ * @version 1.0
+ *
+ */
 #pragma once
 
 #include <string>

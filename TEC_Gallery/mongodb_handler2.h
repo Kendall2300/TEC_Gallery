@@ -1,3 +1,10 @@
+/**
+ * @file mainwindow.h
+ * @authors Kendall Martinez && Gabriel Cerdas
+ * @brief Este codigo contiene las declaraciones de las llamadas necesarias para utilizar la base de datos de la metadata por medio de mongo
+ *
+ * @version 1.0
+ */
 #pragma once
 
 #include <cstdint>

@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp
-HuffEncoder.h
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.h
-iostream
--
-bits/stdc++.h
--
-
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.h
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/HuffEncoder.h
 string
 -
 queue
@@ -22,15 +14,11 @@ queue
 unordered_map
 -
 
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp
-img2stringTraductor.h
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.h
-
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.h
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/img2stringTraductor.h
 string
 -
 
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/main.cpp
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/main.cpp
 iostream
 -
 string
@@ -40,27 +28,21 @@ queue
 unordered_map
 -
 HuffEncoder.h
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.h
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/HuffEncoder.h
 opencv2/opencv.hpp
 -
 opencv2/core/core.hpp
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/opencv2/core/core.hpp
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/opencv2/core/core.hpp
 opencv2/highgui/highgui.hpp
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/opencv2/highgui/highgui.hpp
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/opencv2/highgui/highgui.hpp
 opencv2/imgproc/imgproc.hpp
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/opencv2/imgproc/imgproc.hpp
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/opencv2/imgproc/imgproc.hpp
 img2stringTraductor.h
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.h
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/img2stringTraductor.h
 string2imgTraductor.h
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.h
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/string2imgTraductor.h
 
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp
-string2imgTraductor.h
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.h
-iostream
--
-
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.h
+/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/string2imgTraductor.h
 string
 -
 

@@ -1,3 +1,10 @@
+/**
+ * @file mainwindow.h
+ * @authors Kendall Martinez && Gabriel Cerdas
+ * @brief Este codigo contiene las declaraciones de las llamadas necesarias para mostrar la interfaz grafica del proyecto
+ *
+ * @version 1.0
+ */
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

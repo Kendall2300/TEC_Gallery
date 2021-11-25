@@ -1,7 +1,10 @@
-//
-// Created by dlurena24 on 21/11/21.
-//
-
+/**
+ * @file img2stringTraductor.h
+ * @author Daniel Urena
+ * @brief Este codigo contiene la declaracion de la clase necesaria para traducir la imagen a un string
+ *
+ * @version 1.0
+ */
 #ifndef HUFFMANTEST_IMG2STRINGTRADUCTOR_H
 #define HUFFMANTEST_IMG2STRINGTRADUCTOR_H
 

@@ -1,0 +1,4 @@
+/home/jose/Desktop/TEC_Gallery/build-TEC_Gallery-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/jose/Desktop/TEC_Gallery/build-TEC_Gallery-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/jose/Desktop/TEC_Gallery/build-TEC_Gallery-Desktop-Debug/CMakeFiles/TEC_Gallery.dir
+/home/jose/Desktop/TEC_Gallery/build-TEC_Gallery-Desktop-Debug/CMakeFiles/TEC_Gallery_autogen.dir

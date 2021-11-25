@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"/>
+				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"/>
+				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"/>
+				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="HuffmanTest">
-				<Option output="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/HuffmanTest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"/>
+				<Option output="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug/HuffmanTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 HuffmanTest"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 HuffmanTest"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="HuffmanTest/fast">
-				<Option output="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/HuffmanTest" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug"/>
+				<Option output="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug/HuffmanTest" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,47 +77,47 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 HuffmanTest/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 HuffmanTest/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel\ (copy)/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/HuffEncoder.cpp">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.h">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/HuffEncoder.h">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/img2stringTraductor.cpp">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.h">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/img2stringTraductor.h">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/main.cpp">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/main.cpp">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/string2imgTraductor.cpp">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.h">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/string2imgTraductor.h">
 			<Option target="HuffmanTest"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/CMakeLists.txt">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
 		</Unit>
-		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake">
+		<Unit filename="/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/../../../../../usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\opencv4\"/>
 		</Unit>
 	</Project>

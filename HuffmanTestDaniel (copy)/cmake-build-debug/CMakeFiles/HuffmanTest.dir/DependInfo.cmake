@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/HuffEncoder.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
-  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/img2stringTraductor.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
-  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/main.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/main.cpp.o"
-  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/string2imgTraductor.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
+  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/HuffEncoder.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug/CMakeFiles/HuffmanTest.dir/HuffEncoder.cpp.o"
+  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/img2stringTraductor.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug/CMakeFiles/HuffmanTest.dir/img2stringTraductor.cpp.o"
+  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/main.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug/CMakeFiles/HuffmanTest.dir/main.cpp.o"
+  "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/string2imgTraductor.cpp" "/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel (copy)/cmake-build-debug/CMakeFiles/HuffmanTest.dir/string2imgTraductor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

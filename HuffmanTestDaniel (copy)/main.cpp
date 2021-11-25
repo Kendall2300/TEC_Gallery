@@ -196,6 +196,38 @@ void paridad(int pdd, int img)
     }
 }
 
+string filesImg(int pdd, int img)
+{
+    fstream myFile;
+    int k = 0;
+    array<string, 3> discos;
+    string file, bina;
+    if(pdd==0)
+    {
+        discos = {"1", "2", "3"};
+    }
+    if(pdd==1)
+    {
+        discos = {"0", "2", "3"};
+    }
+    if(pdd==2)
+    {
+        discos = {"0", "1", "3"};
+    }
+    if(pdd==3)
+    {
+        discos = {"0", "1", "2"};
+    }
+    while(k!=3) {
+        myFile.open("../RAID/Disk" + discos[k] + "/Imagen" + to_string(img) + ".txt", ios::in);
+        getline(myFile, file);
+        bina += file;
+        myFile.close();
+        k++;
+    }
+    return bina;
+}
+
 int main() {
     Mat img;
     string imgStr, incomStr;
@@ -241,13 +273,12 @@ int main() {
     division(binEncoded, pdd, numI);
     paridad(pdd, numI);
 
-
 /// Desde RAIDS
 /// Inicia la decodificación
 
 //  Cambiar con la integración
     string incomBinEncoded;
-    incomBinEncoded = binEncoded;
+    incomBinEncoded = filesImg(pdd, numI);
 
 //  Decodificar
 //    string fromBin;

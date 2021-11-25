@@ -1,3 +1,10 @@
+/**
+ * @file mainwindow.h
+ * @authors Kendall Martinez && Gabriel Cerdas
+ * @brief Este codigo contiene las declaraciones de las llamadas necesarias para mostrar la interfaz grafica de la metadata
+ *
+ * @version 1.0
+ */
 #ifndef SECONDWIN_H
 #define SECONDWIN_H
 
