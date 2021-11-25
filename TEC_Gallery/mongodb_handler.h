@@ -1,3 +1,14 @@
+/**
+ * @file mongodb_handler.h
+ * @authors Kendall Martinez Carvajal (kendallmc@estudiantec.cr)
+ * @brief Este codigo contiene la definicion de los metodos para manipular la informacion
+ *  que se le pasa a la base de datos.
+ *
+ *  @version 1.0
+ *
+ *  @copyright Copyright (c) 2021
+ */
+
 #pragma once
 
 #include <cstdint>
@@ -24,10 +35,19 @@ namespace Users {
 
     class MongoDbUserHandler {
     public:
+        /**
+         * @brief Este es el metodo destructor de la clase.
+         */
         MongoDbUserHandler()
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
+        /**
+         * @brief Ete metodo se encarga de anadir usuarios a la base de datos
+         * @param user_name A string
+         * @param user_pass A string
+         * @return a bool
+         */
         bool AddUserToDb(const std::string &user_name,
                               const std::string &user_pass) {
             mongocxx::collection collection = db[kCollectionName];
@@ -45,7 +65,11 @@ namespace Users {
             }
             return false;
         }
-
+        /**
+         * @brief Este metodo se encarga de eliminar usuarios de la base de datos
+         * @param user_name A string
+         * @return a bool
+         */
         bool RemoveUserFromDb(const std::string &user_name) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};
@@ -60,6 +84,13 @@ namespace Users {
             }
             return false;
         }
+        /**
+         * @brief Este metodo se encarga de obtener el password de un usuario en la base de datos
+         * asi como tambien verifica si el password pasado es el correcto, autenticando de esta forma un usuario.
+         * @param user_name A string
+         * @param password A string
+         * @return a bool
+         */
         bool getUserPass(const std::string &user_name, const std::string &password){
             mongocxx::collection collection = db[kCollectionName];
             bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one({});
@@ -82,7 +113,12 @@ namespace Users {
                 std::cout<<"Wrong user name"<<std::endl;
             }
         }
-
+        /**
+         * @brief Este metodo se encarga de actualizar la contrasena de un usuario
+         * @param user_name A string
+         * @param new_password A string
+         * @return A bool
+         */
         bool updatePassword(const std::string &user_name, const std::string &new_password) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};

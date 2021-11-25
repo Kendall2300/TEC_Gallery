@@ -1,3 +1,15 @@
+/**
+ * @file mongodb_handler2.h
+ * @author Kendall Martinez Carvajal (kendallmc@estudiantec.cr)
+ * @brief Este codigo contiene la definicion de los metodos para manipular la informacion
+ *  que se le pasa a la base de datos correspondiente a la metadata.
+ *
+ *  @version 1.0
+ *
+ *  @copyright Copyright (c) 2021
+ */
+
+#pragma once
 #include <cstdint>
 #include <string>
 #include <iostream>
@@ -15,10 +27,23 @@ namespace Metadata {
 
     class MongoDbMetaHandler {
     public:
+        /**
+         * @brief Este es el metodo destructor de la clase.
+         */
         MongoDbMetaHandler()
                 : uri(mongocxx::uri(kMongoDbUri)),
                   client(mongocxx::client(uri)),
                   db(client[kDatabaseName]) {}
+        /**
+         * @brief Ete metodo se encarga de anadir la metadata correspondiente a la base de datos
+         * @param img_name A string
+         * @param img_autor A string
+         * @param creation_year A string
+         * @param height A string
+         * @param description A string
+         * @param user_name A string
+         * @return A bool
+         */
         bool AddMetadataToDb(const std::string &img_name,
                          const std::string &img_autor,
                          const std::string &creation_year,
@@ -44,7 +69,11 @@ namespace Metadata {
             }
             return false;
         }
-
+        /**
+         * @brief ESte metodo se encarga de remover la metadata ed una imagen
+         * @param img_name A string
+         * @return A bool
+         */
         bool RemoveMetadataFromDb(const std::string &img_name) {
             mongocxx::collection collection = db[kCollectionName];
             auto builder = bsoncxx::builder::stream::document{};
@@ -59,6 +88,11 @@ namespace Metadata {
             }
             return false;
         }
+        /**
+         * @brief Este metodo se encarga de obtener la metadata de una imagen
+         * @param img_name A string
+         * @return A bool
+         */
         bool getMetadata(const std::string &img_name){
             mongocxx::collection collection = db[kCollectionName];
             bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one({});
@@ -86,6 +120,16 @@ namespace Metadata {
                 std::cout<<"Image not found"<<std::endl;
             }
         }
+        /**
+         * @brief Este metodo se encarga de actualizar la metadata de una imagen
+         * @param img_name A string
+         * @param new_img_name A string
+         * @param new_autor A string
+         * @param new_creation_year A string
+         * @param new_height A string
+         * @param new_description A string
+         * @return A bool
+         */
         bool updateMetadata(const std::string &img_name,
                             const std::string &new_img_name,
                             const std::string &new_autor,
