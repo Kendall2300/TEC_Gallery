@@ -9,6 +9,7 @@
 #include "opencv2/imgproc/imgproc.hpp"
 #include "img2stringTraductor.h"
 #include "string2imgTraductor.h"
+#include <fstream>
 
 
 
@@ -196,7 +197,8 @@ void paridad(int pdd, int img)
     }
 }
 
-int main() {
+int irows, icols;
+string mat2str(){
     Mat img;
     string imgStr, incomStr;
     img2stringTraductor trad;
@@ -208,8 +210,8 @@ int main() {
     imshow("Image", img);
     waitKey(0);
 
-    int irows = img.rows;
-    int icols = img.cols;
+    irows = img.rows;
+    icols = img.cols;
 
     for (int i = 0; i < irows; i++) {
         for (int j = 0; j < icols; j++) {
@@ -220,10 +222,48 @@ int main() {
 
             incomStr = trad.Traslate(blue, green, red);
             imgStr += incomStr;
+
+        }
+    }
+    return imgStr;
+
+}
+
+void str2mat(string incomingBin){
+
+
+//    ------------------------------------------Opencv Out
+    Mat retImg(irows, icols, CV_8UC3, Scalar(0, 0, 0));
+    string2imgTraductor tradOut;
+
+    string toColorStr = incomingBin;
+
+    for (int i = 0; i < irows; i++)
+    {
+        for (int j = 0; j < icols; j++)
+        {
+            char evalLetter = toColorStr[0];
+            tradOut.traslateBack(evalLetter);
+            Vec3b & color = retImg.at<Vec3b>(i,j);
+
+            color[0] = tradOut.getB();
+            color[1] = tradOut.getG();
+            color[2] = tradOut.getR();
+
+            toColorStr.erase(0,1);
         }
     }
 
-    cout << imgStr << endl;
+    imwrite("../bruhhhh.png", retImg);
+    imshow("Image",retImg);
+    waitKey(0);
+}
+
+int main() {
+
+
+    string imgStr = mat2str();
+    cout << "Coded image string:\n" << imgStr << endl;
 
 //    ------------------------------------------
     HuffEncoder huff;
@@ -249,46 +289,17 @@ int main() {
     string incomBinEncoded;
     incomBinEncoded = binEncoded;
 
-//  Decodificar
-//    string fromBin;
-//    int index = -1;
-//    while (index < (int) binEncoded.size() - 2) {
-//        huff.decode(huff.getRoot(), index, binEncoded);
-//    }
-
+//  Manda a decodificar el binario
+    cout << "Loading decoded binary...\n";
     toDecode(huff, incomBinEncoded);
 
 //  String Recibido del decodificador
-
     string fromBin;
     fromBin = huff.getG();
     cout << fromBin << "\n";
 
 //    ------------------------------------------Opencv Out
-    Mat retImg(irows, icols, CV_8UC3, Scalar(0, 0, 0));
-    string2imgTraductor tradOut;
-
-    string toColorStr = fromBin;
-
-    for (int i = 0; i < irows; i++)
-    {
-        for (int j = 0; j < icols; j++)
-        {
-            char evalLetter = toColorStr[0];
-            tradOut.traslateBack(evalLetter);
-            Vec3b & color = retImg.at<Vec3b>(i,j);
-
-            color[0] = tradOut.getB();
-            color[1] = tradOut.getG();
-            color[2] = tradOut.getR();
-
-            toColorStr.erase(0,1);
-        }
-    }
-
-    imwrite("../bruhhhh.png", retImg);
-    imshow("Image",retImg);
-    waitKey(0);
+    str2mat(fromBin);
 
     return 0;
 }
