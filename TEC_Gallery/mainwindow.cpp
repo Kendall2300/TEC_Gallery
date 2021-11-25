@@ -6,7 +6,7 @@
 #include "secondwin.h"
 #include "signup.h"
 #include "mongodb_handler.h"
-#include <QFileDialog>
+#include "QFileDialog"
 #include <iostream>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -59,14 +59,10 @@ void MainWindow::on_SignIn_clicked()
         //SecondWin secondWin;
         //secondWin.setModal(true);
         //secondWin.exec();
-        ui->line_User->setText("");
-        ui->line_Pass->setText("");
 
     }
     else{
         QMessageBox::warning(this, "Login", "Username and password are not correct");
-        ui->line_User->setText("");
-        ui->line_Pass->setText("");
 
     }
 }
@@ -130,16 +126,11 @@ void MainWindow::on_pushButton_5_clicked()
    foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString();
    const char *path=foldername.c_str();
    system(path);
-   QMessageBox::information(this, "New folder", "Folder cretaed");
-   ui->line_new->setText("");
-
 }
 
 
 void MainWindow::on_pushButton_6_clicked()
 {
     folder = ui->line_folder->text();
-    QMessageBox::information(this, "Folder", "Folder selected");
-    ui->line_folder->setText("");
 }
 
