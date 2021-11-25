@@ -32,19 +32,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 30,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 32,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
 				"line" : 33,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 36,
 				"parent" : 0
 			},
 			{
@@ -193,7 +193,11 @@
 				2,
 				6,
 				9,
-				12
+				12,
+				16,
+				18,
+				20,
+				22
 			]
 		}
 	],
@@ -525,7 +529,11 @@
 				2,
 				6,
 				9,
-				12
+				12,
+				16,
+				18,
+				20,
+				22
 			]
 		},
 		{
@@ -538,10 +546,13 @@
 				11,
 				14,
 				15,
-				16,
 				17,
-				18,
-				19
+				19,
+				21,
+				23,
+				24,
+				25,
+				26
 			]
 		},
 		{
@@ -552,14 +563,14 @@
 				7,
 				10,
 				13,
-				20
+				27
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				21
+				28
 			]
 		}
 	],
@@ -651,6 +662,45 @@
 			"backtrace" : 1,
 			"path" : "mongodb_handler2.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "HuffEncoder.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "HuffEncoder.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "img2stringTraductor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "img2stringTraductor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "string2imgTraductor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "string2imgTraductor.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "principal.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,

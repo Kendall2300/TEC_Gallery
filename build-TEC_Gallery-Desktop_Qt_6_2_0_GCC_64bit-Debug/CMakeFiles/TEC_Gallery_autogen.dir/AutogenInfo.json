@@ -216,6 +216,18 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/HuffEncoder.h",
+			"MU",
+			"EWIEGA46WW/moc_HuffEncoder.cpp",
+			null
+		],
+		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/img2stringTraductor.h",
+			"MU",
+			"EWIEGA46WW/moc_img2stringTraductor.cpp",
+			null
+		],
+		[
 			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -249,6 +261,12 @@
 			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/signup.h",
 			"MU",
 			"EWIEGA46WW/moc_signup.cpp",
+			null
+		],
+		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/string2imgTraductor.h",
+			"MU",
+			"EWIEGA46WW/moc_string2imgTraductor.cpp",
 			null
 		]
 	],
@@ -311,6 +329,16 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/HuffEncoder.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/img2stringTraductor.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/main.cpp",
 			"MU",
 			null
@@ -326,12 +354,22 @@
 			null
 		],
 		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/principal.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/secondwin.cpp",
 			"MU",
 			null
 		],
 		[
 			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/signup.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/kendall/Escritorio/Proyectos/TEC_Gallery/TEC_Gallery/string2imgTraductor.cpp",
 			"MU",
 			null
 		]

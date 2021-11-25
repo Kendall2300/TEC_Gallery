@@ -291,7 +291,7 @@ string filesImg(int pdd, int img)
     return bina;
 }
 
-int main() {
+int principal() {
 
 /// inPath es el path de la imagen, outPath el el nombre del path del archivo final
     string inPath = "../ImgPrueba3.jpeg";

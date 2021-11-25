@@ -3,7 +3,7 @@ project(TEC_Gallery)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
-set(CMAKE_PREFIX_PATH "/home/gabriel/Qt/6.2.0/gcc_64/lib/cmake")
+set(CMAKE_PREFIX_PATH "/home/kendall/Qt/6.2.0/gcc_64/lib/cmake")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 
@@ -28,7 +28,7 @@ include_directories("/usr/local/lib")
 add_executable(TEC_Gallery main.cpp mainwindow.cpp mainwindow.h mainwindow.ui
     secondwin.h secondwin.cpp secondwin.ui metadata.h metadata.cpp metadata.ui
     signup.h signup.cpp signup.ui mongodb_handler.h mongodb_handler2.h HuffEncoder.cpp
-    HuffEncoder.h img2stringTraductor.cpp img2stringTraductor.h string2imgTraductor.cpp string2imgTraductor.h)
+    HuffEncoder.h img2stringTraductor.cpp img2stringTraductor.h string2imgTraductor.cpp string2imgTraductor.h principal.cpp)
 
 target_link_libraries(TEC_Gallery ${LIBMONGOCXX_LIBRARIES})
 target_link_libraries(TEC_Gallery ${LIBBSONCXX_LIBRARIES})
