@@ -6,6 +6,7 @@
 #include <sys/types.h>
 #include <bits/stdc++.h>
 #include <filesystem>
+#include <QMessageBox>
 
 
 using namespace std;
@@ -40,6 +41,9 @@ void SignUp::on_pushButton_clicked()
     foldername ="mkdir -p ../TEC_Gallery/Galerias/"+usernamenew.toStdString();
     const char *path=foldername.c_str();
     system(path);
+
+    QMessageBox::information(this, "Register", "User registered");
+    hide();
 
 
     //if (mkdir(foldername.push_back(fname), 0777)==1)

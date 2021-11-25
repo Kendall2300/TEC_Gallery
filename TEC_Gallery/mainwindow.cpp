@@ -6,7 +6,7 @@
 #include "secondwin.h"
 #include "signup.h"
 #include "mongodb_handler.h"
-#include "QFileDialog"
+#include <QFileDialog>
 #include <iostream>
 #include <sys/stat.h>
 #include <sys/types.h>
@@ -41,7 +41,7 @@ QString username;
 QString password;
 QString newfolder;
 QString folder;
-
+QString _path= "../Tec_Gallery/Galerias/"+username+"/"+folder;
 
 void MainWindow::on_SignIn_clicked()
 {
@@ -52,17 +52,21 @@ void MainWindow::on_SignIn_clicked()
 
     bool verificate = mhandler.getUserPass(username.toStdString(), password.toStdString());
 
-    if (true==verificate){
+    if (verificate==true){
         QMessageBox::information(this, "Login", "Username and password are correct");
-        hide();
+        //hide();
         ui->label_6->setText("Logged as: " + username);
-        SecondWin secondWin;
-        secondWin.setModal(true);
-        secondWin.exec();
+        //SecondWin secondWin;
+        //secondWin.setModal(true);
+        //secondWin.exec();
+        ui->line_User->setText("");
+        ui->line_Pass->setText("");
 
     }
     else{
         QMessageBox::warning(this, "Login", "Username and password are not correct");
+        ui->line_User->setText("");
+        ui->line_Pass->setText("");
 
     }
 }
@@ -83,7 +87,7 @@ void MainWindow::on_label_6_linkActivated(const QString &link)
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString filename= QFileDialog::getOpenFileName(this, tr("Insert"), "../Tec_Gallery/Galerias/"+username, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+    QString filename= QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
         if (QString::compare(filename, QString()) !=0)
         {
             QImage image;
@@ -102,7 +106,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    QString filename= QFileDialog::getOpenFileName(this, tr("Change"), "../Tec_Gallery/Galerias/"+username+folder, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+    QString filename= QFileDialog::getOpenFileName(this, tr("Change"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
         if (QString::compare(filename, QString()) !=0)
         {
             QImage image;
@@ -123,14 +127,19 @@ void MainWindow::on_pushButton_5_clicked()
 {
    newfolder = ui->line_new->text();
    std::string foldername;
-   foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+newfolder.toStdString();
+   foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString();
    const char *path=foldername.c_str();
    system(path);
+   QMessageBox::information(this, "New folder", "Folder cretaed");
+   ui->line_new->setText("");
+
 }
 
 
 void MainWindow::on_pushButton_6_clicked()
 {
     folder = ui->line_folder->text();
+    QMessageBox::information(this, "Folder", "Folder selected");
+    ui->line_folder->setText("");
 }
 

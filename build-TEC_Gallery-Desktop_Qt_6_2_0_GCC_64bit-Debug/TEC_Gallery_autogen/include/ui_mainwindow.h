@@ -44,6 +44,22 @@ public:
     QLabel *label_3;
     QLabel *label_7;
     QPushButton *SignUp;
+    QLabel *label_8;
+    QGroupBox *groupBox_3;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton;
+    QGroupBox *groupBox_4;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_4;
+    QLineEdit *line_new;
+    QPushButton *pushButton_5;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout_5;
+    QLineEdit *line_folder;
+    QPushButton *pushButton_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -120,13 +136,77 @@ public:
         SignUp = new QPushButton(groupBox_2);
         SignUp->setObjectName(QString::fromUtf8("SignUp"));
         SignUp->setGeometry(QRect(70, 80, 89, 25));
+        label_8 = new QLabel(centralwidget);
+        label_8->setObjectName(QString::fromUtf8("label_8"));
+        label_8->setGeometry(QRect(350, 10, 361, 261));
+        groupBox_3 = new QGroupBox(centralwidget);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        groupBox_3->setGeometry(QRect(330, 290, 387, 69));
+        horizontalLayout_3 = new QHBoxLayout(groupBox_3);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        pushButton_4 = new QPushButton(groupBox_3);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        horizontalLayout_3->addWidget(pushButton_4);
+
+        pushButton_2 = new QPushButton(groupBox_3);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout_3->addWidget(pushButton_2);
+
+        pushButton_3 = new QPushButton(groupBox_3);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        horizontalLayout_3->addWidget(pushButton_3);
+
+        pushButton = new QPushButton(groupBox_3);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout_3->addWidget(pushButton);
+
+        groupBox_4 = new QGroupBox(centralwidget);
+        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
+        groupBox_4->setGeometry(QRect(330, 360, 291, 91));
+        widget = new QWidget(groupBox_4);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(10, 30, 281, 27));
+        horizontalLayout_4 = new QHBoxLayout(widget);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        line_new = new QLineEdit(widget);
+        line_new->setObjectName(QString::fromUtf8("line_new"));
+
+        horizontalLayout_4->addWidget(line_new);
+
+        pushButton_5 = new QPushButton(widget);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+
+        horizontalLayout_4->addWidget(pushButton_5);
+
+        widget1 = new QWidget(groupBox_4);
+        widget1->setObjectName(QString::fromUtf8("widget1"));
+        widget1->setGeometry(QRect(10, 60, 245, 27));
+        horizontalLayout_5 = new QHBoxLayout(widget1);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        line_folder = new QLineEdit(widget1);
+        line_folder->setObjectName(QString::fromUtf8("line_folder"));
+
+        horizontalLayout_5->addWidget(line_folder);
+
+        pushButton_6 = new QPushButton(widget1);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+
+        horizontalLayout_5->addWidget(pushButton_6);
+
         MainWindow->setCentralWidget(centralwidget);
         label_5->raise();
         label_4->raise();
         groupBox->raise();
-        line_Pass->raise();
-        label->raise();
         groupBox_2->raise();
+        label_8->raise();
+        groupBox_3->raise();
+        groupBox_4->raise();
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 800, 22));
@@ -154,6 +234,17 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "If you don't have an account,", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "pliss click in \"Sign Up\"", nullptr));
         SignUp->setText(QCoreApplication::translate("MainWindow", "Sign Up", nullptr));
+        label_8->setText(QString());
+        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Image controls", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "Metadata", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Change image", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Insert", nullptr));
+        groupBox_4->setTitle(QCoreApplication::translate("MainWindow", "Manage galeries", nullptr));
+        line_new->setText(QString());
+        pushButton_5->setText(QCoreApplication::translate("MainWindow", "Create new folder", nullptr));
+        line_folder->setText(QString());
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Select folder", nullptr));
     } // retranslateUi
 
 };
