@@ -26,6 +26,8 @@ private slots:
 
     void on_SignUp_clicked();
 
+    void on_label_6_linkActivated(const QString &link);
+
 private:
     Ui::MainWindow *ui;
     SignUp *signup;

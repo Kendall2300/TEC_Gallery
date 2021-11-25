@@ -41,9 +41,11 @@ void MainWindow::on_SignIn_clicked()
     if (true==verificate){
         QMessageBox::information(this, "Login", "Username and password are correct");
         hide();
+        ui->label_6->setText("Logged as: " + username);
         SecondWin secondWin;
         secondWin.setModal(true);
         secondWin.exec();
+
     }
     else{
         QMessageBox::warning(this, "Login", "Username and password are not correct");
@@ -56,5 +58,11 @@ void MainWindow::on_SignUp_clicked()
 {
     signup = new SignUp(this);
     signup->show();
+}
+
+
+void MainWindow::on_label_6_linkActivated(const QString &link)
+{
+    ui->label_6->setText("Logged as: ");
 }
 
