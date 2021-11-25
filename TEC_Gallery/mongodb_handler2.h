@@ -76,7 +76,9 @@ namespace Metadata {
         }
         bool getMetadata(const std::string &img_name){
             mongocxx::collection collection = db[kCollectionName];
-            bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one({});
+            bsoncxx::document::value doc =
+                    builder << "Img_name" << img_name << bsoncxx::builder::stream::finalize;
+            bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one(doc.view());
 
             bsoncxx::document::view view = maybe_result->view();
             bsoncxx::document::element element1 = view["Img_name"];

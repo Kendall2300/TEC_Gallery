@@ -70,7 +70,11 @@ namespace Users {
         }
         bool getUserPass(const std::string &user_name, const std::string &password){
             mongocxx::collection collection = db[kCollectionName];
-            bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one({});
+            auto builder=bsoncxx::builder::stream::document{};
+
+            bsoncxx::document::value doc =
+                    builder<<"User_name"<<user_name<<bsoncxx::builder::stream::finalize;
+            bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one(doc.view());
 
             bsoncxx::document::view view = maybe_result->view();
             bsoncxx::document::element element1 = view["Password"];
