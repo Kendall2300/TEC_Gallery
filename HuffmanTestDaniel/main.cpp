@@ -77,8 +77,19 @@ int main() {
 //    ------------------------------------------
     HuffEncoder huff;
 
+/// A RAIDS
 /// Jose, binEncoded es el binario que va hacia las RAIDS
     string binEncoded = huff.buildHuffmanTree(imgStr);
+
+
+
+
+/// Desde RAIDS
+/// Inicia la decodificación
+
+//  Cambiar con la integración
+    string incomBinEncoded;
+    incomBinEncoded = binEncoded;
 
 //  Decodificar
 //    string fromBin;
@@ -87,7 +98,7 @@ int main() {
 //        huff.decode(huff.getRoot(), index, binEncoded);
 //    }
 
-    toDecode(huff, binEncoded);
+    toDecode(huff, incomBinEncoded);
 
 //  String Recibido del decodificador
 
