@@ -261,7 +261,6 @@ void str2mat(string incomingBin){
 
 int main() {
 
-
     string imgStr = mat2str();
     cout << "Coded image string:\n" << imgStr << endl;
 
@@ -281,7 +280,6 @@ int main() {
     division(binEncoded, pdd, numI);
     paridad(pdd, numI);
 
-
 /// Desde RAIDS
 /// Inicia la decodificación
 
@@ -298,7 +296,7 @@ int main() {
     fromBin = huff.getG();
     cout << fromBin << "\n";
 
-//    ------------------------------------------Opencv Out
+//  Opencv Out
     str2mat(fromBin);
 
     return 0;
