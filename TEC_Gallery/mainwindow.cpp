@@ -54,6 +54,7 @@ int principal();
 int principal2();
 
 QString username;
+QString nameimage;
 QString password;
 QString filename;
 QString newfolder;
@@ -121,7 +122,7 @@ void MainWindow::on_pushButton_clicked()
             }
 
          }
-    QString nameimage = ui->line_nameimage->text();
+    nameimage = ui->line_nameimage->text();
     principal();
 }
 
@@ -248,7 +249,8 @@ void division(string num, int pdd, int img)
     }
     for(int s = 0; s<3; s++)
     {
-        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[s]+"/Imagen1"+".txt", ios::out);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[s]+"/"+nameimage.toStdString()+".txt", ios::out);
+        cout<<"../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[s]+"/"+nameimage.toStdString()+".txt"<<endl;
         if(myFile.is_open()){
             myFile<<lista[s];
             myFile.close();
@@ -283,7 +285,7 @@ void paridad(int pdd, int img)
     }
     while(k!=3)
     {
-        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/Imagen1"+".txt", ios::in);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/"+nameimage.toStdString()+".txt", ios::in);
         if(k == 0)
         {
             getline(myFile, A0);
@@ -357,7 +359,7 @@ void paridad(int pdd, int img)
             continue;
         }
     }
-    myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+to_string(pdd)+"/Imagen1"+".txt", ios::out);
+    myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+to_string(pdd)+"/"+nameimage.toStdString()+".txt", ios::out);
     if(myFile.is_open()){
         myFile<<paridad;
         myFile.close();
@@ -449,7 +451,7 @@ string filesImg(int pdd, int img)
         discos = {"0", "1", "2"};
     }
     while(k!=3) {
-        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/Imagen1"+".txt", ios::in);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/Paridad"+nameimage.toStdString()+".txt", ios::in);
         getline(myFile, file);
         bina += file;
         myFile.close();
@@ -486,7 +488,8 @@ int principal() {
 }
 
 int principal2(){
-    string outPath = "../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/bruhhhh.png";
+    string outPath = "../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/"+nameimage.toStdString()+".png";
+    cout<<outPath<<endl;
 /// Desde RAIDS
 /// Inicia la decodificación
 

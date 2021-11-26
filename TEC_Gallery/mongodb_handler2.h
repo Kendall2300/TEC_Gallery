@@ -95,11 +95,6 @@ namespace Metadata {
             std::string query_description = element5.get_utf8().value.to_string();
 
             if (img_name==query_img_name){
-                /*std::cout<<query_img_name<<std::endl;
-                std::cout<<query_autor<<std::endl;
-                std::cout<<query_creation_year<<std::endl;
-                std::cout<<query_height<<std::endl;
-                std::cout<<query_description<<std::endl;*/
                 std::string resultado;
                 resultado = "Nombre de la imagen: "+query_img_name+"\n"
                         +"Autor: "+query_autor+"\n"
