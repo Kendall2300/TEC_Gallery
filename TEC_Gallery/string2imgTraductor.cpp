@@ -1,7 +1,13 @@
-//
-// Created by dlurena24 on 24/11/21.
-//
-
+/**
+ * @file string2imgTraductor.cpp
+ * @authors Daniel Ureña Lopez
+ * @brief Esta clase se encarga de traducir los valores que recibe de string a valores numericos, los cuales serán
+ * los valores en BGR de la imagen que se creará de manera posterior. Dichos valores seran almacenados en una array,
+ * los cuales se consultaran posteriormente para pintar la imagen pixel a pixel con estos valores.
+ *
+ * @version 1.0
+ *
+ */
 #include "string2imgTraductor.h"
 #include <iostream>
 
@@ -9,6 +15,13 @@ using namespace std;
 
 int colorsBGR[3];
 
+/**
+ * @brief Se encarga de traducir el valor de char que recibe, y en base a este valor, se encarga de guardar numeros
+ * especificos en la array colorsBGR
+ *
+ * @param char inStr
+ *
+ */
 void string2imgTraductor::traslateBack(char inStr){
 
     if(inStr == 'A'){
@@ -148,13 +161,32 @@ void string2imgTraductor::traslateBack(char inStr){
     }
 }
 
+/**
+ * @brief Se encarga de devolver el valor que se encuentra en la posicion 0 de la array colorsBGR
+ *
+ * @return int
+ *
+ */
 int string2imgTraductor::getB(){
     return colorsBGR[0];
 }
 
+/**
+ * @brief Se encarga de devolver el valor que se encuentra en la posicion 1 de la array colorsBGR
+ *
+ * @return int
+ *
+ */
 int string2imgTraductor::getG(){
     return colorsBGR[1];
 }
+
+/**
+ * @brief Se encarga de devolver el valor que se encuentra en la posicion 2 de la array colorsBGR
+ *
+ * @return int
+ *
+ */
 int string2imgTraductor::getR(){
     return colorsBGR[2];
 }

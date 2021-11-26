@@ -1,12 +1,29 @@
-//
-// Created by dlurena24 on 21/11/21.
-//
+/**
+ * @file img2stringTraductor.cpp
+ * @authors Daniel Ureña Lopez
+ * @brief Esta clase se encarga de traducir los valores que recibe de BGR a texto en forma de string, devolviendo
+ * letra a letra, segun sean los valores recibidos.
+ *
+ * @version 1.0
+ *
+ */
 
 #include "img2stringTraductor.h"
 
 
 using namespace std;
 
+/**
+ * @brief Se encarga de traducir los valores que recibe de BGR a letras en string, devolviendo estas letras una por
+ * una cada vez que se llama el método
+ *
+ * @param int b
+ * @param int g
+ * @param int r
+ *
+ * @return string
+ *
+ */
 string img2stringTraductor::Traslate(int b, int g, int r){
     string colorString;
     if (b == 0){
