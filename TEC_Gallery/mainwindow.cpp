@@ -1,3 +1,14 @@
+/**
+ * @file mainwindow.cpp
+ * @authors Kendall Martinez Carvajal (kendallmc@estudiantec.cr) && Gabriel Cerdas Chinchilla (gabocerdas@estudiantec.cr)
+ *          && Daniel Ureña Lopez (dlurena24@estudiantec.cr) && Jose Umaña Rivera (jcur1802@estudiantec.cr)
+ * @brief Este codigo posee toda la logica y metodos para que el proyecto funcione correctamente y a su vez muestre la interfaz
+ * incluido los efectos al pulsar botones y demas.
+ *
+ * @version 1.0
+ *
+ * @copyright Copyright (c) 2021
+ */
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <QLabel>
@@ -28,9 +39,13 @@
 #include "string2imgTraductor.h"
 #include <fstream>
 
+using namespace std;
+using namespace cv;
 
-
-
+/**
+ * @brief MainWindow::MainWindow
+ * @param parent
+ */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -38,12 +53,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 }
 
+/**
+ * @brief MainWindow::~MainWindow
+ */
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
-
+/**
+ * @brief MainWindow::on_label_3_linkActivated
+ * @param link
+ */
 void MainWindow::on_label_3_linkActivated(const QString &link)
 {
     ui->label_3->setText("<font color = 'red'>Some text</font>");
@@ -62,7 +83,12 @@ QString folder;
 QString _path= "../Tec_Gallery/Galerias/"+username+"/"+folder;
 QString _path2= "../Tec_Gallery/Galerias/"+username+"/"+folder+"/";
 QString _path3="../TEC_Gallery/Galerias/"+username+"/"+folder+"/RAID/";
-
+int pdd = 3;
+int numI = 1;
+HuffEncoder huff;
+/**
+ * @brief MainWindow::on_SignIn_clicked
+ */
 void MainWindow::on_SignIn_clicked()
 {
     mongocxx::instance instance;
@@ -91,20 +117,28 @@ void MainWindow::on_SignIn_clicked()
     }
 }
 
-
+/**
+ * @brief MainWindow::on_SignUp_clicked
+ */
 void MainWindow::on_SignUp_clicked()
 {
     signup = new SignUp(this);
     signup->show();
 }
 
-
+/**
+ * @brief MainWindow::on_label_6_linkActivated
+ * @param link
+ */
 void MainWindow::on_label_6_linkActivated(const QString &link)
 {
     ui->label_6->setText("Logged as: ");
 }
 
 //INSERTAR IMAGEN//
+/**
+ * @brief MainWindow::on_pushButton_clicked
+ */
 void MainWindow::on_pushButton_clicked()
 {
     filename = QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
@@ -126,7 +160,9 @@ void MainWindow::on_pushButton_clicked()
     principal();
 }
 
-
+/**
+ * @brief MainWindow::on_pushButton_3_clicked
+ */
 void MainWindow::on_pushButton_3_clicked()
 {
      filename= QFileDialog::getOpenFileName(this, tr("Change"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
@@ -145,7 +181,9 @@ void MainWindow::on_pushButton_3_clicked()
          }
 }
 
-
+/**
+ * @brief MainWindow::on_pushButton_5_clicked
+ */
 void MainWindow::on_pushButton_5_clicked()
 {
    newfolder = ui->line_new->text();
@@ -170,7 +208,9 @@ void MainWindow::on_pushButton_5_clicked()
 
 }
 
-
+/**
+ * @brief MainWindow::on_pushButton_6_clicked
+ */
 void MainWindow::on_pushButton_6_clicked()
 {
     folder = ui->line_folder->text();
@@ -178,12 +218,11 @@ void MainWindow::on_pushButton_6_clicked()
     ui->line_folder->setText("");
 }
 
-/*
- *
+/**
+ * @brief reduceBGR
+ * @param val
+ * @return int
  */
-using namespace std;
-using namespace cv;
-
 inline uchar reduceBGR(const uchar val)
 {
     if (val < 64) return 0;
@@ -191,6 +230,10 @@ inline uchar reduceBGR(const uchar val)
     return 255;
 }
 
+/**
+ * @brief processColors
+ * @param img
+ */
 void processColors(Mat& img)
 {
     uchar* pixelPtr = img.data;
@@ -206,6 +249,11 @@ void processColors(Mat& img)
     }
 }
 
+/**
+ * @brief toDecode
+ * @param inhuff
+ * @param inbinEncoded
+ */
 void toDecode(HuffEncoder inhuff, string inbinEncoded) {
 //    string fromBin;
     int index = -1;
@@ -214,6 +262,12 @@ void toDecode(HuffEncoder inhuff, string inbinEncoded) {
     }
 }
 
+/**
+ * @brief division
+ * @param num
+ * @param pdd
+ * @param img
+ */
 void division(string num, int pdd, int img)
 {
     fstream myFile;
@@ -257,7 +311,11 @@ void division(string num, int pdd, int img)
         }
     }
 }
-
+/**
+ * @brief paridad
+ * @param pdd
+ * @param img
+ */
 void paridad(int pdd, int img)
 {
     int j = 0;
@@ -366,6 +424,9 @@ void paridad(int pdd, int img)
     }
 }
 
+/**
+ * @brief irows
+ */
 int irows, icols;
 string mat2str(string path){
     Mat img;
@@ -397,7 +458,11 @@ string mat2str(string path){
     return imgStr;
 
 }
-
+/**
+ * @brief str2mat
+ * @param incomingBin
+ * @param outimg
+ */
 void str2mat(string incomingBin, string outimg){
 
 
@@ -427,7 +492,12 @@ void str2mat(string incomingBin, string outimg){
     imshow("Image",retImg);
     waitKey(0);
 }
-
+/**
+ * @brief filesImg
+ * @param pdd
+ * @param img
+ * @return
+ */
 string filesImg(int pdd, int img)
 {
     fstream myFile;
@@ -460,10 +530,10 @@ string filesImg(int pdd, int img)
     return bina;
 }
 
-int pdd = 3;
-int numI = 1;
-HuffEncoder huff;
-
+/**
+ * @brief principal
+ * @return int
+ */
 int principal() {
 
 /// inPath es el path de la imagen, outPath el el nombre del path del archivo final
@@ -487,6 +557,10 @@ int principal() {
 
 }
 
+/**
+ * @brief principal2
+ * @return int
+ */
 int principal2(){
     string outPath = "../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/"+nameimage.toStdString()+".png";
     cout<<outPath<<endl;
@@ -512,8 +586,10 @@ int principal2(){
     return 0;
 }
 
+/**
+ * @brief MainWindow::on_pushButton_2_clicked
+ */
 void MainWindow::on_pushButton_2_clicked()
 {
     principal2();
 }
-
