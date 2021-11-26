@@ -1,3 +1,12 @@
+/**
+ * @file signup.cpp
+ * @authors Kendall Martinez Carvajal (kendallmc@estudiantec.cr) && Gabriel Cerdas Chinchilla (gabocerdas@estudiantec.cr)
+ * @brief Este codigo posee toda la logica y metodos para que el proyecto pueda añadir un usuario a la base de datos por medio de una interfaz.
+ *
+ * @version 1.0
+ *
+ * @copyright Copyright (c) 2021
+ */
 #include "signup.h"
 #include "ui_signup.h"
 #include "mongodb_handler.h"
@@ -12,19 +21,26 @@
 using namespace std;
 
 
-
+/**
+ * @brief SignUp::SignUp
+ * @param parent
+ */
 SignUp::SignUp(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::SignUp)
 {
     ui->setupUi(this);
 }
-
+/**
+ * @brief SignUp::~SignUp
+ */
 SignUp::~SignUp()
 {
     delete ui;
 }
-
+/**
+ * @brief SignUp::on_pushButton_clicked
+ */
 void SignUp::on_pushButton_clicked()
 {
     mongocxx::instance instance;
