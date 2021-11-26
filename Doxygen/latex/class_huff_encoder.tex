@@ -1,0 +1,110 @@
+\hypertarget{class_huff_encoder}{}\doxysection{Huff\+Encoder Class Reference}
+\label{class_huff_encoder}\index{HuffEncoder@{HuffEncoder}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_huff_encoder_1_1comp}{comp}}
+\item 
+struct \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_huff_encoder_a871053eae07d2aaa24c6f74ed707cff8}\label{class_huff_encoder_a871053eae07d2aaa24c6f74ed707cff8}} 
+\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$ {\bfseries get\+Node} (char ch, int freq, \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$left, \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$right)
+\item 
+\mbox{\Hypertarget{class_huff_encoder_a8d524fb1539dfe30bb0b75ccefff3537}\label{class_huff_encoder_a8d524fb1539dfe30bb0b75ccefff3537}} 
+\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$ {\bfseries get\+Root} ()
+\item 
+void \mbox{\hyperlink{class_huff_encoder_ae0b5a7a6495125361dfc155cb3d1f1e2}{encode}} (\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$root, std\+::string str, std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \&huffman\+Code)
+\begin{DoxyCompactList}\small\item\em Se encarga de crear el diccionario en base al Huffman tree creado de manera previa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_huff_encoder_a426d52f8e2b60ffd46e936ade16630fc}{decode}} (\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$root, int \&index, std\+::string str)
+\begin{DoxyCompactList}\small\item\em Se encarga de decodificar el string que recibe(el cual es un codigo binario) y lo traduce a letras, cada letra que recibe se almacena en una string global llamada g. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_huff_encoder_aee605ff539423069ebabae7b18adbf05}{getG}} ()
+\begin{DoxyCompactList}\small\item\em Se encarga de devolver el string g, el cual contiene el codigo traducido por la clase decode. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_huff_encoder_a89e6bbfcfca5eb41587f8587f8877ec6}{build\+Huffman\+Tree}} (std\+::string text)
+\begin{DoxyCompactList}\small\item\em Se encarga de contar la frecuencia de cada caracter que recibe en el string que recibe, y crea un Huffman tree en base a la frecuencia de los caracteres del string, además se encarga de llamar a la clase encode para crear el diccionario, y en base a el crea el codigo binario comprimido, y lo devuelve en forma de string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_huff_encoder_aa1e2c3d4f0c6b7743436fee7063e0e98}\label{class_huff_encoder_aa1e2c3d4f0c6b7743436fee7063e0e98}} 
+\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$ {\bfseries root}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_huff_encoder_a89e6bbfcfca5eb41587f8587f8877ec6}\label{class_huff_encoder_a89e6bbfcfca5eb41587f8587f8877ec6}} 
+\index{HuffEncoder@{HuffEncoder}!buildHuffmanTree@{buildHuffmanTree}}
+\index{buildHuffmanTree@{buildHuffmanTree}!HuffEncoder@{HuffEncoder}}
+\doxysubsubsection{\texorpdfstring{buildHuffmanTree()}{buildHuffmanTree()}}
+{\footnotesize\ttfamily string Huff\+Encoder\+::build\+Huffman\+Tree (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+
+
+Se encarga de contar la frecuencia de cada caracter que recibe en el string que recibe, y crea un Huffman tree en base a la frecuencia de los caracteres del string, además se encarga de llamar a la clase encode para crear el diccionario, y en base a el crea el codigo binario comprimido, y lo devuelve en forma de string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & text\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_huff_encoder_a426d52f8e2b60ffd46e936ade16630fc}\label{class_huff_encoder_a426d52f8e2b60ffd46e936ade16630fc}} 
+\index{HuffEncoder@{HuffEncoder}!decode@{decode}}
+\index{decode@{decode}!HuffEncoder@{HuffEncoder}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily void Huff\+Encoder\+::decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$}]{root,  }\item[{int \&}]{index,  }\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+
+
+Se encarga de decodificar el string que recibe(el cual es un codigo binario) y lo traduce a letras, cada letra que recibe se almacena en una string global llamada g. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Node$\ast$} & root \\
+\hline
+{\em int} & \&index \\
+\hline
+{\em string} & str \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_huff_encoder_ae0b5a7a6495125361dfc155cb3d1f1e2}\label{class_huff_encoder_ae0b5a7a6495125361dfc155cb3d1f1e2}} 
+\index{HuffEncoder@{HuffEncoder}!encode@{encode}}
+\index{encode@{encode}!HuffEncoder@{HuffEncoder}}
+\doxysubsubsection{\texorpdfstring{encode()}{encode()}}
+{\footnotesize\ttfamily void Huff\+Encoder\+::encode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} $\ast$}]{root,  }\item[{std\+::string}]{str,  }\item[{std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \&}]{huffman\+Code }\end{DoxyParamCaption})}
+
+
+
+Se encarga de crear el diccionario en base al Huffman tree creado de manera previa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Node$\ast$} & root \\
+\hline
+{\em string} & str \\
+\hline
+{\em unordered\+\_\+map$<$char,string$>$} & \&huffman\+Code \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_huff_encoder_aee605ff539423069ebabae7b18adbf05}\label{class_huff_encoder_aee605ff539423069ebabae7b18adbf05}} 
+\index{HuffEncoder@{HuffEncoder}!getG@{getG}}
+\index{getG@{getG}!HuffEncoder@{HuffEncoder}}
+\doxysubsubsection{\texorpdfstring{getG()}{getG()}}
+{\footnotesize\ttfamily string Huff\+Encoder\+::getG (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se encarga de devolver el string g, el cual contiene el codigo traducido por la clase decode. 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_huff_encoder_8h}{Huff\+Encoder.\+h}}\item 
+\mbox{\hyperlink{_huff_encoder_8cpp}{Huff\+Encoder.\+cpp}}\end{DoxyCompactItemize}

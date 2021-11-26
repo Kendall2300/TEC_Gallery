@@ -1,0 +1,168 @@
+\hypertarget{mongodb__handler2_8h_source}{}\doxysection{mongodb\+\_\+handler2.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}vector"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}bsoncxx/json.hpp"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}mongocxx/client.hpp"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}mongocxx/stdx.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}mongocxx/uri.hpp"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}mongocxx/instance.hpp"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}mongocxx/database.hpp"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}bsoncxx/builder/stream/helpers.hpp"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}bsoncxx/builder/stream/document.hpp"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}bsoncxx/builder/stream/array.hpp"{}}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }Metadata \{}
+\DoxyCodeLine{26     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{char} kMongoDbUri[] = \textcolor{stringliteral}{"{}mongodb://0.0.0.0:27017"{}};}
+\DoxyCodeLine{27     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{char} kDatabaseName[] = \textcolor{stringliteral}{"{}TECGallery"{}};}
+\DoxyCodeLine{28     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{char} kCollectionName[] = \textcolor{stringliteral}{"{}Metadata\_info"{}};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{class }\mbox{\hyperlink{class_metadata_1_1_mongo_db_meta_handler}{MongoDbMetaHandler}} \{}
+\DoxyCodeLine{31     \textcolor{keyword}{public}:}
+\DoxyCodeLine{32         \mbox{\hyperlink{class_metadata_1_1_mongo_db_meta_handler}{MongoDbMetaHandler}}()}
+\DoxyCodeLine{33                 : uri(mongocxx::uri(kMongoDbUri)),}
+\DoxyCodeLine{34                   client(mongocxx::client(uri)),}
+\DoxyCodeLine{35                   db(client[kDatabaseName]) \{\}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keywordtype}{bool} AddMetadataToDb(\textcolor{keyword}{const} std::string \&img\_name,}
+\DoxyCodeLine{38                          \textcolor{keyword}{const} std::string \&img\_autor,}
+\DoxyCodeLine{39                          \textcolor{keyword}{const} std::string \&creation\_year,}
+\DoxyCodeLine{40                          \textcolor{keyword}{const} std::string \&height,}
+\DoxyCodeLine{41                          \textcolor{keyword}{const} std::string \&description,}
+\DoxyCodeLine{42                          \textcolor{keyword}{const} std::string \&user\_name) \{}
+\DoxyCodeLine{43             mongocxx::collection collection = db[kCollectionName];}
+\DoxyCodeLine{44             \textcolor{keyword}{auto} builder = bsoncxx::builder::stream::document\{\};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46             bsoncxx::v\_noabi::document::value doc\_value =}
+\DoxyCodeLine{47                     builder << \textcolor{stringliteral}{"{}Img\_name"{}} << img\_name}
+\DoxyCodeLine{48                             << \textcolor{stringliteral}{"{}Autor"{}} << img\_autor}
+\DoxyCodeLine{49                             << \textcolor{stringliteral}{"{}Creation\_year"{}} << creation\_year}
+\DoxyCodeLine{50                             << \textcolor{stringliteral}{"{}Height"{}} << height}
+\DoxyCodeLine{51                             << \textcolor{stringliteral}{"{}Description"{}} << description}
+\DoxyCodeLine{52                             << \textcolor{stringliteral}{"{}User\_name"{}} << user\_name}
+\DoxyCodeLine{53                             <<bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55             bsoncxx::stdx::optional<mongocxx::result::insert\_one> maybe\_result =}
+\DoxyCodeLine{56                     collection.insert\_one(doc\_value.view());}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58             \textcolor{keywordflow}{if}(maybe\_result) \{}
+\DoxyCodeLine{59                 \textcolor{keywordflow}{return} maybe\_result-\/>inserted\_id().get\_oid().value.to\_string().size() != 0;}
+\DoxyCodeLine{60             \}}
+\DoxyCodeLine{61             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{62         \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{keywordtype}{bool} RemoveMetadataFromDb(\textcolor{keyword}{const} std::string \&img\_name) \{}
+\DoxyCodeLine{65             mongocxx::collection collection = db[kCollectionName];}
+\DoxyCodeLine{66             \textcolor{keyword}{auto} builder = bsoncxx::builder::stream::document\{\};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68             bsoncxx::document::value doc =}
+\DoxyCodeLine{69                     builder << \textcolor{stringliteral}{"{}Img\_name"{}} << img\_name << bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{70             bsoncxx::stdx::optional<mongocxx::result::delete\_result> maybe\_result =}
+\DoxyCodeLine{71                     collection.delete\_one(doc.view());}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73             \textcolor{keywordflow}{if}(maybe\_result) \{}
+\DoxyCodeLine{74                 \textcolor{keywordflow}{return} maybe\_result-\/>deleted\_count() == 1;}
+\DoxyCodeLine{75             \}}
+\DoxyCodeLine{76             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         std::string getMetadata(\textcolor{keyword}{const} std::string \&img\_name)\{}
+\DoxyCodeLine{79             mongocxx::collection collection = db[kCollectionName];}
+\DoxyCodeLine{80             \textcolor{keyword}{auto} builder = bsoncxx::builder::stream::document\{\};}
+\DoxyCodeLine{81             bsoncxx::document::value doc =}
+\DoxyCodeLine{82                     builder << \textcolor{stringliteral}{"{}Img\_name"{}} << img\_name << bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{83             bsoncxx::stdx::optional<bsoncxx::document::value> maybe\_result = collection.find\_one(doc.view());}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85             bsoncxx::document::view view = maybe\_result-\/>view();}
+\DoxyCodeLine{86             bsoncxx::document::element element1 = view[\textcolor{stringliteral}{"{}Img\_name"{}}];}
+\DoxyCodeLine{87             bsoncxx::document::element element2 = view[\textcolor{stringliteral}{"{}Autor"{}}];}
+\DoxyCodeLine{88             bsoncxx::document::element element3 = view[\textcolor{stringliteral}{"{}Creation\_year"{}}];}
+\DoxyCodeLine{89             bsoncxx::document::element element4 = view[\textcolor{stringliteral}{"{}Height"{}}];}
+\DoxyCodeLine{90             bsoncxx::document::element element5 = view[\textcolor{stringliteral}{"{}Description"{}}];}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92             std::string query\_img\_name = element1.get\_utf8().value.to\_string();}
+\DoxyCodeLine{93             std::string query\_autor = element2.get\_utf8().value.to\_string();}
+\DoxyCodeLine{94             std::string query\_creation\_year = element3.get\_utf8().value.to\_string();}
+\DoxyCodeLine{95             std::string query\_height = element4.get\_utf8().value.to\_string();}
+\DoxyCodeLine{96             std::string query\_description = element5.get\_utf8().value.to\_string();}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98             \textcolor{keywordflow}{if} (img\_name==query\_img\_name)\{}
+\DoxyCodeLine{99                 std::string resultado;}
+\DoxyCodeLine{100                 resultado = \textcolor{stringliteral}{"{}Nombre de la imagen: "{}}+query\_img\_name+\textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{101                         +\textcolor{stringliteral}{"{}Autor: "{}}+query\_autor+\textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{102                         +\textcolor{stringliteral}{"{}Fecha de creacion: "{}}+query\_creation\_year+\textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{103                         +\textcolor{stringliteral}{"{}Tamaño de la imagen: "{}}+query\_height+\textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{104                         +\textcolor{stringliteral}{"{}Descripcion: "{}}+query\_description+\textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{105                 \textcolor{keywordflow}{return} resultado;}
+\DoxyCodeLine{106             \} \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{107                 std::string bad=\textcolor{stringliteral}{"{}Imagen no encontrada"{}};}
+\DoxyCodeLine{108                 \textcolor{keywordflow}{return} bad;}
+\DoxyCodeLine{109             \}}
+\DoxyCodeLine{110         \}}
+\DoxyCodeLine{111         \textcolor{keywordtype}{bool} updateMetadata(\textcolor{keyword}{const} std::string \&img\_name,}
+\DoxyCodeLine{112                             \textcolor{keyword}{const} std::string \&new\_img\_name,}
+\DoxyCodeLine{113                             \textcolor{keyword}{const} std::string \&new\_autor,}
+\DoxyCodeLine{114                             \textcolor{keyword}{const} std::string \&new\_creation\_year,}
+\DoxyCodeLine{115                             \textcolor{keyword}{const} std::string \&new\_height,}
+\DoxyCodeLine{116                             \textcolor{keyword}{const} std::string \&new\_description) \{}
+\DoxyCodeLine{117             mongocxx::collection collection = db[kCollectionName];}
+\DoxyCodeLine{118             \textcolor{keyword}{auto} builder = bsoncxx::builder::stream::document\{\};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121             bsoncxx::document::value query\_doc =}
+\DoxyCodeLine{122                     builder << \textcolor{stringliteral}{"{}Img\_name"{}} << img\_name}
+\DoxyCodeLine{123                             << bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{124             bsoncxx::document::value update\_doc =}
+\DoxyCodeLine{125                     builder << \textcolor{stringliteral}{"{}\$set"{}} << bsoncxx::builder::stream::open\_document}
+\DoxyCodeLine{126                     << \textcolor{stringliteral}{"{}Img\_name"{}} << new\_img\_name}
+\DoxyCodeLine{127                     << \textcolor{stringliteral}{"{}Autor"{}} << new\_autor}
+\DoxyCodeLine{128                     << \textcolor{stringliteral}{"{}Creation\_year"{}} << new\_creation\_year}
+\DoxyCodeLine{129                     << \textcolor{stringliteral}{"{}Height"{}} << new\_height}
+\DoxyCodeLine{130                     << \textcolor{stringliteral}{"{}Description"{}} << new\_description}
+\DoxyCodeLine{131                     << bsoncxx::builder::stream::close\_document}
+\DoxyCodeLine{132                             << bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134             bsoncxx::stdx::optional<mongocxx::result::update> maybe\_result =}
+\DoxyCodeLine{135                     collection.update\_one(query\_doc.view(), update\_doc.view());}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137             \textcolor{keywordflow}{if}(maybe\_result) \{}
+\DoxyCodeLine{138                 \textcolor{keywordflow}{return} maybe\_result-\/>modified\_count() == 1;}
+\DoxyCodeLine{139             \}}
+\DoxyCodeLine{140             \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{141         \}}
+\DoxyCodeLine{142         \textcolor{keywordtype}{bool} validateUserImg(\textcolor{keyword}{const} std::string \&img\_name,\textcolor{keyword}{const} std::string \&user\_name)\{}
+\DoxyCodeLine{143             mongocxx::collection collection = db[kCollectionName];}
+\DoxyCodeLine{144             \textcolor{keyword}{auto} builder = bsoncxx::builder::stream::document\{\};}
+\DoxyCodeLine{145             bsoncxx::document::value doc =}
+\DoxyCodeLine{146                     builder << \textcolor{stringliteral}{"{}Img\_name"{}} << img\_name << bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{147             bsoncxx::stdx::optional<bsoncxx::document::value> maybe\_result = collection.find\_one(doc.view());}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149             bsoncxx::document::view view = maybe\_result-\/>view();}
+\DoxyCodeLine{150             bsoncxx::document::element element1 = view[\textcolor{stringliteral}{"{}Img\_name"{}}];}
+\DoxyCodeLine{151             bsoncxx::document::element element2 = view[\textcolor{stringliteral}{"{}User\_name"{}}];}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153             std::string query\_img\_name = element1.get\_utf8().value.to\_string();}
+\DoxyCodeLine{154             std::string query\_user\_name = element2.get\_utf8().value.to\_string();}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156             \textcolor{keywordflow}{if}(img\_name==query\_img\_name)\{}
+\DoxyCodeLine{157                 \textcolor{keywordflow}{if}(user\_name==query\_user\_name)\{}
+\DoxyCodeLine{158                     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{159                 \}\textcolor{keywordflow}{else}\{ \textcolor{keywordflow}{return} \textcolor{keyword}{false};\}}
+\DoxyCodeLine{160             \}\textcolor{keywordflow}{else}\{\textcolor{keywordflow}{return} \textcolor{keyword}{false};\}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162         \}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164     \textcolor{keyword}{private}:}
+\DoxyCodeLine{165         mongocxx::uri uri;}
+\DoxyCodeLine{166         mongocxx::client client;}
+\DoxyCodeLine{167         mongocxx::database db;}
+\DoxyCodeLine{168     \};}
+\DoxyCodeLine{169 \}}
+
+\end{DoxyCode}

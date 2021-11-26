@@ -1,3 +1,0 @@
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/jose/Desktop/TEC_Gallery/HuffmanTestDaniel/cmake-build-debug/CMakeFiles/HuffmanTest.dir

@@ -1,0 +1,285 @@
+\hypertarget{mainwindow_8cpp}{}\doxysection{mainwindow.\+cpp File Reference}
+\label{mainwindow_8cpp}\index{mainwindow.cpp@{mainwindow.cpp}}
+
+
+Este codigo posee toda la logica y metodos para que el proyecto funcione correctamente y a su vez muestre la interfaz incluido los efectos al pulsar botones y demas.  
+
+
+{\ttfamily \#include \char`\"{}mainwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}./ui\+\_\+mainwindow.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$QLabel$>$}\newline
+{\ttfamily \#include $<$QColor$>$}\newline
+{\ttfamily \#include $<$QMessage\+Box$>$}\newline
+{\ttfamily \#include \char`\"{}secondwin.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mongodb\+\_\+handler.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$QFile\+Dialog$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$mongodb\+\_\+handler2.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include \char`\"{}Huff\+Encoder.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}opencv2/core/core.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/highgui/highgui.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}opencv2/imgproc/imgproc.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}img2string\+Traductor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string2img\+Traductor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{mainwindow_8cpp_a2e152753cd8ba4b52330146dd514d935}{principal}} ()
+\begin{DoxyCompactList}\small\item\em principal \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{mainwindow_8cpp_a0e0db81a3f310f9626251bfc863124cf}{principal2}} ()
+\begin{DoxyCompactList}\small\item\em principal2 \end{DoxyCompactList}\item 
+uchar \mbox{\hyperlink{mainwindow_8cpp_abf80956f6ac2f3dcf94079ad1b9aaa1e}{reduce\+BGR}} (const uchar val)
+\begin{DoxyCompactList}\small\item\em reduce\+BGR \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainwindow_8cpp_ace6e259ac3c35c802084f749902c82a4}{process\+Colors}} (Mat \&img)
+\begin{DoxyCompactList}\small\item\em process\+Colors \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainwindow_8cpp_a638785d889e7080c3d50d20796d588f7}{to\+Decode}} (\mbox{\hyperlink{class_huff_encoder}{Huff\+Encoder}} inhuff, string inbin\+Encoded)
+\begin{DoxyCompactList}\small\item\em to\+Decode \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainwindow_8cpp_ae0761189027fa97a16edcac7e73f3a32}{division}} (string num, int pdd, int img)
+\begin{DoxyCompactList}\small\item\em division \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{mainwindow_8cpp_adfccbebca68150ef6b30f62e3e0e6525}{paridad}} (int pdd, int img)
+\begin{DoxyCompactList}\small\item\em paridad \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mainwindow_8cpp_afe96823ea377c4688a8f185d160241d8}\label{mainwindow_8cpp_afe96823ea377c4688a8f185d160241d8}} 
+string {\bfseries mat2str} (string path)
+\item 
+void \mbox{\hyperlink{mainwindow_8cpp_a0aa1ac61b9c1ac7d510c07040dfa2670}{str2mat}} (string incoming\+Bin, string outimg)
+\begin{DoxyCompactList}\small\item\em str2mat \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{mainwindow_8cpp_afc25a95062337b32f189c6329288efba}{files\+Img}} (int pdd, int img)
+\begin{DoxyCompactList}\small\item\em files\+Img \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a0a70f438fb66450afb5f042723ca5894}\label{mainwindow_8cpp_a0a70f438fb66450afb5f042723ca5894}} 
+mongocxx\+::instance {\bfseries instance}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_ad579b3a955f4e4c034f10f9a8c90c717}\label{mainwindow_8cpp_ad579b3a955f4e4c034f10f9a8c90c717}} 
+\mbox{\hyperlink{class_users_1_1_mongo_db_user_handler}{Users\+::\+Mongo\+Db\+User\+Handler}} {\bfseries mhandler}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a3e70d440b7ff08e7a1c65d8b72275e7c}\label{mainwindow_8cpp_a3e70d440b7ff08e7a1c65d8b72275e7c}} 
+\mbox{\hyperlink{class_metadata_1_1_mongo_db_meta_handler}{Metadata\+::\+Mongo\+Db\+Meta\+Handler}} {\bfseries metahandler}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a2ce6bd1a843994dad85d804e15b4692e}\label{mainwindow_8cpp_a2ce6bd1a843994dad85d804e15b4692e}} 
+QString {\bfseries username}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a983c68f15f044d19d48f7f1e4056b1a2}\label{mainwindow_8cpp_a983c68f15f044d19d48f7f1e4056b1a2}} 
+QString {\bfseries nameimage}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_ad6a222392dd884ea1a93cec0f3316413}\label{mainwindow_8cpp_ad6a222392dd884ea1a93cec0f3316413}} 
+QString {\bfseries password}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_aac274af37f5fbaaa2c47d19145cfd856}\label{mainwindow_8cpp_aac274af37f5fbaaa2c47d19145cfd856}} 
+QString {\bfseries filename}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a8790c8b76839e0f7a11af0e6bdc0a1a6}\label{mainwindow_8cpp_a8790c8b76839e0f7a11af0e6bdc0a1a6}} 
+QString {\bfseries newfolder}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a1068696dcdd5b69737ee7f8d20f0d4cb}\label{mainwindow_8cpp_a1068696dcdd5b69737ee7f8d20f0d4cb}} 
+QString {\bfseries folder}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a1ff0301004ea2418e667bd673c80e8e4}\label{mainwindow_8cpp_a1ff0301004ea2418e667bd673c80e8e4}} 
+QString {\bfseries \+\_\+path} = \char`\"{}../Tec\+\_\+\+Gallery/Galerias/\char`\"{}+username+\char`\"{}/\char`\"{}+folder
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a4b440e132238228987fa943aa4fc94bc}\label{mainwindow_8cpp_a4b440e132238228987fa943aa4fc94bc}} 
+QString {\bfseries \+\_\+path2} = \char`\"{}../Tec\+\_\+\+Gallery/Galerias/\char`\"{}+username+\char`\"{}/\char`\"{}+folder+\char`\"{}/\char`\"{}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a676bdb3a0302da980410f54a3ef15301}\label{mainwindow_8cpp_a676bdb3a0302da980410f54a3ef15301}} 
+QString {\bfseries \+\_\+path3} =\char`\"{}../TEC\+\_\+\+Gallery/Galerias/\char`\"{}+username+\char`\"{}/\char`\"{}+folder+\char`\"{}/RAID/\char`\"{}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a86ba2997cee4af72fd141a7c7b9edcfb}\label{mainwindow_8cpp_a86ba2997cee4af72fd141a7c7b9edcfb}} 
+int {\bfseries pddR} = 0
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_afea6048d7c8bed3932f2bb6bbfec9534}\label{mainwindow_8cpp_afea6048d7c8bed3932f2bb6bbfec9534}} 
+int {\bfseries numI} = 1
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a60916a8bbf440391b41444f42e3fc2ca}\label{mainwindow_8cpp_a60916a8bbf440391b41444f42e3fc2ca}} 
+string {\bfseries pdd}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_af41c51b8daf1a3875f3e0df9a50e380d}\label{mainwindow_8cpp_af41c51b8daf1a3875f3e0df9a50e380d}} 
+\mbox{\hyperlink{class_huff_encoder}{Huff\+Encoder}} {\bfseries huff}
+\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a26303a28ae85f4add00ab9d60cb9cd99}\label{mainwindow_8cpp_a26303a28ae85f4add00ab9d60cb9cd99}} 
+int {\bfseries irows}
+\begin{DoxyCompactList}\small\item\em irows \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{mainwindow_8cpp_a4156c6b461253711a781c21da5e23714}\label{mainwindow_8cpp_a4156c6b461253711a781c21da5e23714}} 
+int {\bfseries icols}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Este codigo posee toda la logica y metodos para que el proyecto funcione correctamente y a su vez muestre la interfaz incluido los efectos al pulsar botones y demas. 
+
+\begin{DoxyAuthor}{Authors}
+Kendall Martinez Carvajal (\href{mailto:kendallmc@estudiantec.cr}{\texttt{ kendallmc@estudiantec.\+cr}}) \&\& Gabriel Cerdas Chinchilla (\href{mailto:gabocerdas@estudiantec.cr}{\texttt{ gabocerdas@estudiantec.\+cr}}) \&\& Daniel Ureña Lopez (\href{mailto:dlurena24@estudiantec.cr}{\texttt{ dlurena24@estudiantec.\+cr}}) \&\& Jose Umaña Rivera (\href{mailto:jcur1802@estudiantec.cr}{\texttt{ jcur1802@estudiantec.\+cr}})
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0
+\end{DoxyVersion}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2021 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mainwindow_8cpp_ae0761189027fa97a16edcac7e73f3a32}\label{mainwindow_8cpp_ae0761189027fa97a16edcac7e73f3a32}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!division@{division}}
+\index{division@{division}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{division()}{division()}}
+{\footnotesize\ttfamily void division (\begin{DoxyParamCaption}\item[{string}]{num,  }\item[{int}]{pdd,  }\item[{int}]{img }\end{DoxyParamCaption})}
+
+
+
+division 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & \\
+\hline
+{\em pdd} & \\
+\hline
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mainwindow_8cpp_afc25a95062337b32f189c6329288efba}\label{mainwindow_8cpp_afc25a95062337b32f189c6329288efba}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!filesImg@{filesImg}}
+\index{filesImg@{filesImg}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{filesImg()}{filesImg()}}
+{\footnotesize\ttfamily string files\+Img (\begin{DoxyParamCaption}\item[{int}]{pdd,  }\item[{int}]{img }\end{DoxyParamCaption})}
+
+
+
+files\+Img 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pdd} & \\
+\hline
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{mainwindow_8cpp_adfccbebca68150ef6b30f62e3e0e6525}\label{mainwindow_8cpp_adfccbebca68150ef6b30f62e3e0e6525}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!paridad@{paridad}}
+\index{paridad@{paridad}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{paridad()}{paridad()}}
+{\footnotesize\ttfamily void paridad (\begin{DoxyParamCaption}\item[{int}]{pdd,  }\item[{int}]{img }\end{DoxyParamCaption})}
+
+
+
+paridad 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pdd} & \\
+\hline
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mainwindow_8cpp_a2e152753cd8ba4b52330146dd514d935}\label{mainwindow_8cpp_a2e152753cd8ba4b52330146dd514d935}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!principal@{principal}}
+\index{principal@{principal}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{principal()}{principal()}}
+{\footnotesize\ttfamily int principal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+principal 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+in\+Path es el path de la imagen, out\+Path el el nombre del path del archivo final
+
+A RAIDS Jose, bin\+Encoded es el binario que va hacia las RAIDS\mbox{\Hypertarget{mainwindow_8cpp_a0e0db81a3f310f9626251bfc863124cf}\label{mainwindow_8cpp_a0e0db81a3f310f9626251bfc863124cf}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!principal2@{principal2}}
+\index{principal2@{principal2}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{principal2()}{principal2()}}
+{\footnotesize\ttfamily int principal2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+principal2 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Desde RAIDS Inicia la decodificación\mbox{\Hypertarget{mainwindow_8cpp_ace6e259ac3c35c802084f749902c82a4}\label{mainwindow_8cpp_ace6e259ac3c35c802084f749902c82a4}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!processColors@{processColors}}
+\index{processColors@{processColors}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{processColors()}{processColors()}}
+{\footnotesize\ttfamily void process\+Colors (\begin{DoxyParamCaption}\item[{Mat \&}]{img }\end{DoxyParamCaption})}
+
+
+
+process\+Colors 
+
+
+\begin{DoxyParams}{Parameters}
+{\em img} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mainwindow_8cpp_abf80956f6ac2f3dcf94079ad1b9aaa1e}\label{mainwindow_8cpp_abf80956f6ac2f3dcf94079ad1b9aaa1e}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!reduceBGR@{reduceBGR}}
+\index{reduceBGR@{reduceBGR}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{reduceBGR()}{reduceBGR()}}
+{\footnotesize\ttfamily uchar reduce\+BGR (\begin{DoxyParamCaption}\item[{const uchar}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+reduce\+BGR 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{mainwindow_8cpp_a0aa1ac61b9c1ac7d510c07040dfa2670}\label{mainwindow_8cpp_a0aa1ac61b9c1ac7d510c07040dfa2670}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!str2mat@{str2mat}}
+\index{str2mat@{str2mat}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{str2mat()}{str2mat()}}
+{\footnotesize\ttfamily void str2mat (\begin{DoxyParamCaption}\item[{string}]{incoming\+Bin,  }\item[{string}]{outimg }\end{DoxyParamCaption})}
+
+
+
+str2mat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em incoming\+Bin} & \\
+\hline
+{\em outimg} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mainwindow_8cpp_a638785d889e7080c3d50d20796d588f7}\label{mainwindow_8cpp_a638785d889e7080c3d50d20796d588f7}} 
+\index{mainwindow.cpp@{mainwindow.cpp}!toDecode@{toDecode}}
+\index{toDecode@{toDecode}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{toDecode()}{toDecode()}}
+{\footnotesize\ttfamily void to\+Decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_huff_encoder}{Huff\+Encoder}}}]{inhuff,  }\item[{string}]{inbin\+Encoded }\end{DoxyParamCaption})}
+
+
+
+to\+Decode 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inhuff} & \\
+\hline
+{\em inbin\+Encoded} & \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,53 @@
+\hypertarget{_huff_encoder_8h_source}{}\doxysection{Huff\+Encoder.\+h}
+\mbox{\hyperlink{_huff_encoder_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_huff_encoder}{HuffEncoder}} \{}
+\DoxyCodeLine{16     \textcolor{keyword}{public}:}
+\DoxyCodeLine{17 \textcolor{comment}{//    std::string g = "{}1"{};}}
+\DoxyCodeLine{18     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} \{}
+\DoxyCodeLine{19         \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{20         \textcolor{keywordtype}{int} freq;}
+\DoxyCodeLine{21         \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}} *left, *right;}
+\DoxyCodeLine{22     \};}
+\DoxyCodeLine{23     \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* getNode(\textcolor{keywordtype}{char} ch, \textcolor{keywordtype}{int} freq, \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* left, \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* right)\{}
+\DoxyCodeLine{24     \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* node = \textcolor{keyword}{new} \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     node-\/>ch = ch;}
+\DoxyCodeLine{27     node-\/>freq = freq;}
+\DoxyCodeLine{28     node-\/>left = left;}
+\DoxyCodeLine{29     node-\/>right = right;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keywordflow}{return} node;}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33     Node* root;}
+\DoxyCodeLine{34     Node* getRoot()\{}
+\DoxyCodeLine{35         \textcolor{keywordflow}{return} root;}
+\DoxyCodeLine{36     \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_huff_encoder_1_1comp}{comp}}\{}
+\DoxyCodeLine{41         \textcolor{keywordtype}{bool} operator()(\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* l, \mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* r)}
+\DoxyCodeLine{42         \{}
+\DoxyCodeLine{43             \textcolor{comment}{// highest priority item has lowest frequency}}
+\DoxyCodeLine{44             \textcolor{keywordflow}{return} l-\/>freq > r-\/>freq;}
+\DoxyCodeLine{45         \}}
+\DoxyCodeLine{46     \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_huff_encoder_ae0b5a7a6495125361dfc155cb3d1f1e2}{encode}} (\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* root, std::string str, std::unordered\_map<char, std::string> \&huffmanCode);}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_huff_encoder_a426d52f8e2b60ffd46e936ade16630fc}{decode}}(\mbox{\hyperlink{struct_huff_encoder_1_1_node}{Node}}* root, \textcolor{keywordtype}{int} \&index, std::string str);}
+\DoxyCodeLine{50     std::string \mbox{\hyperlink{class_huff_encoder_aee605ff539423069ebabae7b18adbf05}{getG}}();}
+\DoxyCodeLine{51     std::string \mbox{\hyperlink{class_huff_encoder_a89e6bbfcfca5eb41587f8587f8877ec6}{buildHuffmanTree}}(std::string text);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \};}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+
+\end{DoxyCode}
