@@ -142,25 +142,31 @@ void MainWindow::on_label_6_linkActivated(const QString &link)
  */
 void MainWindow::on_pushButton_clicked()
 {
-    filename = QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
-        if (QString::compare(filename, QString()) !=0)
-        {
-            QImage image;
-            bool vallid = image.load(filename);
-            if (vallid)        {
-                image = image.scaledToWidth(ui->label_8->width(), Qt::SmoothTransformation);
-                ui->label_8->setPixmap(QPixmap::fromImage(image));
-            }
-            else
-            {
-                // Error
-            }
-
-         }
     nameimage = ui->line_nameimage->text();
-    metahandler.AddMetadataToDb(nameimage.toStdString()+"", "", "", "", "", username.toStdString());
+    if (nameimage == ""){
+         QMessageBox::warning(this, "No image", "It is mandatory to give a name to the image");
+    }
+    else{
+        filename = QFileDialog::getOpenFileName(this, tr("Insert"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+            if (QString::compare(filename, QString()) !=0)
+            {
+                QImage image;
+                bool vallid = image.load(filename);
+                if (vallid)        {
+                    image = image.scaledToWidth(ui->label_8->width(), Qt::SmoothTransformation);
+                    ui->label_8->setPixmap(QPixmap::fromImage(image));
+                }
+                else
+                {
+                    // Error
+                }
 
-    principal();
+             }
+
+        metahandler.AddMetadataToDb(nameimage.toStdString()+"", "", "", "", "", username.toStdString());
+
+        principal();
+    }
 }
 
 /**
@@ -194,24 +200,29 @@ void MainWindow::on_pushButton_3_clicked()
 void MainWindow::on_pushButton_5_clicked()
 {
    newfolder = ui->line_new->text();
-   std::string foldername;
-   foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk0";
-   const char *path=foldername.c_str();
-   system(path);
-   std::string foldername2;
-   foldername2 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk1";
-   const char *path2=foldername2.c_str();
-   system(path2);
-   std::string foldername3;
-   foldername3 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk2";
-   const char *path3=foldername3.c_str();
-   system(path3);
-   std::string foldername4;
-   foldername4 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk3";
-   const char *path4=foldername4.c_str();
-   system(path4);
-   QMessageBox::information(this, "New folder", "Folder cretaed");
-   ui->line_new->setText("");
+   if(newfolder == ""){
+       QMessageBox::warning(this, "Any name", "It is mandatory to give a name for the folder");
+   }
+   else{
+       std::string foldername;
+       foldername ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk0";
+       const char *path=foldername.c_str();
+       system(path);
+       std::string foldername2;
+       foldername2 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk1";
+       const char *path2=foldername2.c_str();
+       system(path2);
+       std::string foldername3;
+       foldername3 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk2";
+       const char *path3=foldername3.c_str();
+       system(path3);
+       std::string foldername4;
+       foldername4 ="mkdir -p ../TEC_Gallery/Galerias/"+username.toStdString()+"/"+newfolder.toStdString()+"/RAID/Disk3";
+       const char *path4=foldername4.c_str();
+       system(path4);
+       QMessageBox::information(this, "New folder", "Folder cretaed");
+       ui->line_new->setText("");
+   }
 
 }
 
@@ -221,8 +232,13 @@ void MainWindow::on_pushButton_5_clicked()
 void MainWindow::on_pushButton_6_clicked()
 {
     folder = ui->line_folder->text();
-    QMessageBox::information(this, "Folder", "Folder selected");
-    ui->line_folder->setText("");
+    if (folder == ""){
+        QMessageBox::warning(this, "Any name", "It is mandatory to give a name for the folder you want to use");
+    }
+    else{
+        QMessageBox::information(this, "Folder", "Folder selected");
+        ui->line_folder->setText("");
+    }
 }
 
 /**
@@ -639,10 +655,16 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    string parcial = metahandler.getMetadata(nameimage.toStdString());
-    QString metadata = QString::fromStdString(parcial);
-    ui->label_14->setText(metadata);
-    QMessageBox::information(this, "Metadata", "Metadata showed");
+    if (true==metahandler.validateUserImg(nameimage.toStdString(), username.toStdString())){
+        string parcial = metahandler.getMetadata(nameimage.toStdString());
+        QString metadata = QString::fromStdString(parcial);
+        ui->label_14->setText(metadata);
+        QMessageBox::information(this, "Metadata", "Metadata showed");
+    }
+
+    else{
+        QMessageBox::warning(this, "Image", "Image does not belongs to this user");
+    }
 }
 
 
