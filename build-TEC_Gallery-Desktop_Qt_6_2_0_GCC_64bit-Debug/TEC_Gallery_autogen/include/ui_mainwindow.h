@@ -61,7 +61,7 @@ public:
     QLineEdit *line_folder;
     QPushButton *pushButton_6;
     QGroupBox *groupBox_5;
-    QWidget *widget;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_6;
     QLineEdit *line_nameimage;
     QMenuBar *menubar;
@@ -206,13 +206,13 @@ public:
         groupBox_5 = new QGroupBox(centralwidget);
         groupBox_5->setObjectName(QString::fromUtf8("groupBox_5"));
         groupBox_5->setGeometry(QRect(400, 10, 281, 61));
-        widget = new QWidget(groupBox_5);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(20, 30, 239, 27));
-        horizontalLayout_6 = new QHBoxLayout(widget);
+        layoutWidget2 = new QWidget(groupBox_5);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(20, 30, 239, 27));
+        horizontalLayout_6 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         horizontalLayout_6->setContentsMargins(0, 0, 0, 0);
-        line_nameimage = new QLineEdit(widget);
+        line_nameimage = new QLineEdit(layoutWidget2);
         line_nameimage->setObjectName(QString::fromUtf8("line_nameimage"));
 
         horizontalLayout_6->addWidget(line_nameimage);
