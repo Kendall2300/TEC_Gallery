@@ -327,7 +327,6 @@ void division(string num, int pdd, int img)
     for(int s = 0; s<3; s++)
     {
         myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[s]+"/"+nameimage.toStdString()+".txt", ios::out);
-        cout<<"../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[s]+"/"+nameimage.toStdString()+".txt"<<endl;
         if(myFile.is_open()){
             myFile<<lista[s];
             myFile.close();
@@ -460,7 +459,7 @@ string mat2str(string path){
     // Procesar imagen
     processColors(img);
 
-    imshow("Image", img);
+    //imshow("Image", img);
     waitKey(0);
 
     irows = img.rows;
@@ -512,7 +511,7 @@ void str2mat(string incomingBin, string outimg){
     }
 
     imwrite(outimg, retImg);
-    imshow("Image",retImg);
+    //imshow("Image",retImg);
     waitKey(0);
 }
 /**
@@ -562,7 +561,7 @@ int principal() {
 /// inPath es el path de la imagen, outPath el el nombre del path del archivo final
     string inPath = filename.toStdString();
     string imgStr = mat2str(inPath);
-    cout << "Coded image string:\n" << "Imagen lista" << endl;
+    //cout << "Coded image string:\n" << "Imagen lista" << endl;
 
 //    ------------------------------------------
 
@@ -605,7 +604,7 @@ int principal() {
  */
 int principal2(){
     string outPath = "../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/"+nameimage.toStdString()+".png";
-    cout<<outPath<<endl;
+    //cout<<outPath<<endl;
 /// Desde RAIDS
 /// Inicia la decodificación
 
@@ -637,7 +636,7 @@ int principal2(){
 //  String Recibido del decodificador
     string fromBin;
     fromBin = huff.getG();
-    cout << fromBin << "\n";
+    //cout << fromBin << "\n";
 
 //  Opencv Out
     str2mat(fromBin, outPath);
