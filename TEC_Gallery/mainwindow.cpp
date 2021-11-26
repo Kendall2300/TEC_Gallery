@@ -158,6 +158,10 @@ void MainWindow::on_pushButton_clicked()
 
          }
     nameimage = ui->line_nameimage->text();
+    mongocxx::instance instance;
+    Metadata::MongoDbMetaHandler metahandler;
+    metahandler.AddMetadataToDb(nameimage.toStdString(), "", "", "", "", username.toStdString());
+
     principal();
 }
 
@@ -630,3 +634,34 @@ void MainWindow::on_pushButton_2_clicked()
 {
     principal2();
 }
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    mongocxx::instance instance;
+    Metadata::MongoDbMetaHandler metahandler;
+    string parcial = metahandler.getMetadata(nameimage.toStdString());
+    QString metadata = QString::fromStdString(parcial);
+    ui->label_14->setText(metadata);
+    QMessageBox::information(this, "Metadata", "Metadata showed");
+}
+
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    QString author = ui->meta_author->text();
+    QString name_image=ui->meta_name->text();
+    QString size=ui->meta_size->text();
+    QString year=ui->meta_year->text();
+    QString description=ui->meta_des->text();
+
+    mongocxx::instance instance;
+    Metadata::MongoDbMetaHandler metahandler;
+    metahandler.updateMetadata(nameimage.toStdString(), name_image.toStdString(), author.toStdString(), year.toStdString(), size.toStdString(), description.toStdString());
+    string archivoname = filename.toStdString();
+    string archivoname2 = archivoname.substr(archivoname.find_last_of("/\\")+1);
+    std::cout<<archivoname2<<endl;
+    QMessageBox::information(this, "Update Metadata", "Metadata updated");
+
+
+}
+
