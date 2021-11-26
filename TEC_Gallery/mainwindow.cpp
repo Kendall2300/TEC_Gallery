@@ -83,8 +83,9 @@ QString folder;
 QString _path= "../Tec_Gallery/Galerias/"+username+"/"+folder;
 QString _path2= "../Tec_Gallery/Galerias/"+username+"/"+folder+"/";
 QString _path3="../TEC_Gallery/Galerias/"+username+"/"+folder+"/RAID/";
-int pdd = 3;
+int pddR = 0;
 int numI = 1;
+string pdd;
 HuffEncoder huff;
 /**
  * @brief MainWindow::on_SignIn_clicked
@@ -552,8 +553,27 @@ int principal() {
     {
         binEncoded = binEncoded + 'a';
     }
-    division(binEncoded, pdd, numI);
-    paridad(pdd, numI);
+
+    fstream myFile;
+    myFile.open("pdd.txt", ios::in);
+    if (myFile.is_open()){
+        getline(myFile, pdd);
+        if(pdd == "3") {
+                pddR = 3;
+        }
+            if(pdd == "2") {
+                pddR = 2;
+            }
+            if(pdd == "1") {
+                pddR = 1;
+            }
+            if(pdd == "0") {
+                pddR = 0;
+            }
+            myFile.close();
+        }
+    division(binEncoded, pddR, numI);
+    paridad(pddR, numI);
 
 }
 
@@ -569,7 +589,24 @@ int principal2(){
 
 //  Cambiar con la integración
     string incomBinEncoded;
-    incomBinEncoded = filesImg(pdd, numI);
+    incomBinEncoded = filesImg(pddR, numI);
+    fstream myFile;
+    myFile.open("pdd.txt", ios::out);
+        if (myFile.is_open()){
+            if(pdd == "3"){
+                myFile << "2";
+            }
+            if(pdd == "2"){
+                myFile << "1";
+            }
+            if(pdd == "1"){
+                myFile << "0";
+            }
+            if(pdd == "0"){
+                myFile << "3";
+            }
+            myFile.close();
+        }
 
 //  Manda a decodificar el binario
     cout << "Loading decoded binary...\n";
