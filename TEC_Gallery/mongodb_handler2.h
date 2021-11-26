@@ -49,7 +49,8 @@ namespace Metadata {
                             << "Creation_year" << creation_year
                             << "Height" << height
                             << "Description" << description
-                            << bsoncxx::builder::stream::finalize;
+                            << "User_name" << user_name
+                            <<bsoncxx::builder::stream::finalize;
 
             bsoncxx::stdx::optional<mongocxx::result::insert_one> maybe_result =
                     collection.insert_one(doc_value.view());
@@ -137,6 +138,27 @@ namespace Metadata {
                 return maybe_result->modified_count() == 1;
             }
             return false;
+        }
+        bool validateUserImg(const std::string &img_name,const std::string &user_name){
+            mongocxx::collection collection = db[kCollectionName];
+            auto builder = bsoncxx::builder::stream::document{};
+            bsoncxx::document::value doc =
+                    builder << "Img_name" << img_name << bsoncxx::builder::stream::finalize;
+            bsoncxx::stdx::optional<bsoncxx::document::value> maybe_result = collection.find_one(doc.view());
+
+            bsoncxx::document::view view = maybe_result->view();
+            bsoncxx::document::element element1 = view["Img_name"];
+            bsoncxx::document::element element2 = view["User_name"];
+
+            std::string query_img_name = element1.get_utf8().value.to_string();
+            std::string query_user_name = element2.get_utf8().value.to_string();
+
+            if(img_name==query_img_name){
+                if(user_name==query_user_name){
+                    return true;
+                }else{ return false;}
+            }else{return false;}
+
         }
 
     private:
