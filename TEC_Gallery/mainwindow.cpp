@@ -418,7 +418,7 @@ void paridad(int pdd, int img)
             continue;
         }
     }
-    myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+to_string(pdd)+"/"+nameimage.toStdString()+".txt", ios::out);
+    myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+to_string(pdd)+"/Paridad"+nameimage.toStdString()+".txt", ios::out);
     if(myFile.is_open()){
         myFile<<paridad;
         myFile.close();
@@ -522,7 +522,7 @@ string filesImg(int pdd, int img)
         discos = {"0", "1", "2"};
     }
     while(k!=3) {
-        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/Paridad"+nameimage.toStdString()+".txt", ios::in);
+        myFile.open("../TEC_Gallery/Galerias/"+username.toStdString()+"/"+folder.toStdString()+"/RAID/"+"Disk"+discos[k]+"/"+nameimage.toStdString()+".txt", ios::in);
         getline(myFile, file);
         bina += file;
         myFile.close();
