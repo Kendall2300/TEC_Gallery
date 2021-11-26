@@ -73,7 +73,9 @@ void MainWindow::on_label_3_linkActivated(const QString &link)
 
 int principal();
 int principal2();
-
+mongocxx::instance instance;
+Users::MongoDbUserHandler mhandler;
+Metadata::MongoDbMetaHandler metahandler;
 QString username;
 QString nameimage;
 QString password;
@@ -92,8 +94,6 @@ HuffEncoder huff;
  */
 void MainWindow::on_SignIn_clicked()
 {
-    mongocxx::instance instance;
-    Users::MongoDbUserHandler mhandler;
     username = ui->line_User->text();
     password = ui->line_Pass->text();
 
@@ -158,9 +158,7 @@ void MainWindow::on_pushButton_clicked()
 
          }
     nameimage = ui->line_nameimage->text();
-    mongocxx::instance instance;
-    Metadata::MongoDbMetaHandler metahandler;
-    metahandler.AddMetadataToDb(nameimage.toStdString(), "", "", "", "", username.toStdString());
+    metahandler.AddMetadataToDb(nameimage.toStdString()+"", "", "", "", "", username.toStdString());
 
     principal();
 }
@@ -170,7 +168,7 @@ void MainWindow::on_pushButton_clicked()
  */
 void MainWindow::on_pushButton_3_clicked()
 {
-     filename= QFileDialog::getOpenFileName(this, tr("Change"), _path, tr("Images(*.png *.jpg *.jpeg *.gif)"));
+     filename= QFileDialog::getOpenFileName(this, tr("Change"), "../Tec_Gallery/Galerias/"+username+"/"+folder, tr("Images(*.png *.jpg *.jpeg *.gif)"));
         if (QString::compare(filename, QString()) !=0)
         {
             QImage image;
@@ -178,12 +176,16 @@ void MainWindow::on_pushButton_3_clicked()
             if (vallid)        {
                 image = image.scaledToWidth(ui->label_8->width(), Qt::SmoothTransformation);
                 ui->label_8->setPixmap(QPixmap::fromImage(image));
+                string archivoname = filename.toStdString();
+                string archivoname2 = archivoname.substr(archivoname.find_last_of("/\\")+1);
+                nameimage = QString::fromStdString(archivoname2);
             }
             else
             {
                 // Error
             }
          }
+
 }
 
 /**
@@ -637,8 +639,6 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_4_clicked()
 {
-    mongocxx::instance instance;
-    Metadata::MongoDbMetaHandler metahandler;
     string parcial = metahandler.getMetadata(nameimage.toStdString());
     QString metadata = QString::fromStdString(parcial);
     ui->label_14->setText(metadata);
@@ -654,12 +654,7 @@ void MainWindow::on_pushButton_7_clicked()
     QString year=ui->meta_year->text();
     QString description=ui->meta_des->text();
 
-    mongocxx::instance instance;
-    Metadata::MongoDbMetaHandler metahandler;
     metahandler.updateMetadata(nameimage.toStdString(), name_image.toStdString(), author.toStdString(), year.toStdString(), size.toStdString(), description.toStdString());
-    string archivoname = filename.toStdString();
-    string archivoname2 = archivoname.substr(archivoname.find_last_of("/\\")+1);
-    std::cout<<archivoname2<<endl;
     QMessageBox::information(this, "Update Metadata", "Metadata updated");
 
 
